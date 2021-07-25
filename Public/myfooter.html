@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Footer</title>
+	    <link rel="stylesheet" type="text/css" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+	    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+	    <style type="text/css">
+			@font-face {
+				font-family: amazonFont;
+				src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+			}
+	    	body{
+	    		margin: 0px;
+                font-family: amazonFont, Helvetica, sans-serif;
+	    	}
+	    	.back-top-top{
+	    		background-color: #37475A;
+	    		color: #fff;
+                padding: 15px 0;
+                text-align: center;
+                font-size: 13px;
+	    	}
+	    	.back-top-top:hover{
+	    		background-color: #485769;
+	    		color: #fff;
+                cursor: pointer;
+	    	}
+	    	.navFooter{
+	    		display: grid;
+	    		grid-template-columns: 3fr 3fr 3fr 3fr;
+	    		background-color: #232F3E;
+	    		height: 200px;
+				padding: 20px 65px 60px;
+	    		border-bottom: 1px solid #3a4553;
+	    	}
+	    	.navFootCol{
+	    		margin-top: 30px;
+	    		margin-left: 70px;
+	    	}
+	    	.navFootHead{
+	    		color: #fff;
+	    		font-weight: 700;
+	    		text-align: left;
+	    		font-size: 17px;
+	    		margin-bottom: 10px;
+	    	}
+	    	.navFootCol ul{
+	    		list-style-type: none;
+	    		text-align: left;
+	    		margin: 0px;
+	    		padding: 0px;
+
+	    	}
+	    	.navFootCol ul li{
+	    		margin-bottom: 10px;
+	    		color: #ddd;
+	    		font-size: 14px;
+
+	    	}
+	    	.navFootCol ul li:hover{
+	    		cursor: pointer;
+	    		text-decoration: underline;
+	    	}
+	    	.logo-box{
+	    		background-color: #232F3E;
+	    		color: #fff;
+	    		text-align: center;
+	    		padding: 20px;
+	    	}
+	    	.logoAmazonFoot{
+	    		height: 18px;
+	    		width: 60px;
+	    		margin-top: 20px;
+	    		margin-right: 70px;
+	    	}
+	    	.lang{
+	    		border: 1px solid #848688;
+	    		display: inline !important;
+				padding: 8px 10px;
+				border-radius: 4px;
+	    	}
+			.lang:hover{
+				cursor: pointer;
+			}
+	    	.lang .xp{
+	    		font-size: 14px;
+	    	}
+	    	.lang .eng{
+	    		font-size: 12px;
+	    		margin: 0 8px;
+	    	}
+	    	.inline{
+	    		display: inline !important;
+	    	}
+	    	.countries{
+	    		background-color: #232F3E;
+	    		color: #ddd;
+				text-align: center;
+	    		font-size: 13px;
+	    		padding: 0 140px;
+	    		padding-bottom: 30px;
+	    	}
+	    	.countries ul{
+	    		list-style-type: none;
+	    		display: inline-block;
+	    		margin: 0px;
+	    		padding: 0px;
+	    	}
+	    	.countries ul li{
+	    		display: inline;
+	    		margin-right: 12px;
+				text-align: center;
+				line-height: 25px;
+	    	}
+	    	.countries ul li:hover{
+	    		cursor: pointer;
+	    		text-decoration: underline;
+	    	}
+	    	.footerDesc{
+	    		background-color: #131A22;
+				display: grid;
+				grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+				padding: 20px 140px;
+	    	}
+	    	.footerHead{
+	    		color: #ddd;
+	    		font-size: 11px !important;
+	    	}
+	    	.footerHead:hover{
+	    		text-decoration: underline;
+	    		cursor: pointer;
+	    	}
+	    	.footCol{
+	    		margin-bottom: 12px;
+	    	}
+	    	.footCol:hover{
+	    		text-decoration: underline;
+	    		cursor: pointer;
+	    		
+	    	}
+	    	.footCol .lh{
+	    		color: #999;
+	    		font-size: 10px;
+	    		margin: 5px 0;
+	    	}
+	    	.footCol .lh:hover{
+	    		text-decoration: underline;
+	    		cursor: pointer;
+	    	}
+
+
+	    	.footCopy{
+	    		background-color: #131A22;
+	    		color: #ddd;
+	    		font-size: 13px;
+	    		padding: 0 200px;
+	    		padding-bottom: 30px;
+	    		text-align: center;
+	    	}
+	    	.footCopy ul{
+	    		list-style-type: none;
+	    		display: inline-block;
+	    		margin: 0px;
+	    		padding: 0px;
+	    	}
+	    	.footCopy ul li{
+	    		display: inline;
+	    		margin-right: 12px;
+				text-align: center;
+				line-height: 25px;
+	    	}
+	    	.footCopy ul li:hover{
+	    		cursor: pointer;
+	    		text-decoration: underline;
+	    	}
+	    </style>
+	</head>
+	<body>
+		<footer>
+			<div class="back-top-top">
+				<span>Back to Top</span>
+			</div>
+            <div class="navFooter">
+                <div class="navFootCol">
+                	<div class="navFootHead">Get to Know Us</div>
+                	<ul>
+                		<li>About Us</li>
+                		<li>Careers</li>
+                		<li>Press Releases</li>
+                		<li>Amazon Cares</li>
+                		<li>Gift a Smile</li>
+                	</ul>
+                </div>
+
+                <div class="navFootCol">
+                	<div class="navFootHead">Connect with Us</div>
+                	<ul>
+                		<li>Facebook</li>
+                		<li>Twitter</li>
+                		<li>Instagram</li>
+                	</ul>
+                </div>
+
+                <div class="navFootCol">
+                	<div class="navFootHead">Make Money with Us</div>
+                	<ul>
+                		<li>Sell on Amazon</li>
+                		<li>Sell under Amazon Accelerator</li>
+                		<li>Amazon Global Selling</li>
+                		<li>Become an Affiliate</li>
+                		<li>Fulfilment by Amazon</li>
+						<li>Advertise Your Products</li>
+						<li>Amazon Pay on Merchants</li>
+                	</ul>
+                </div>
+
+                <div class="navFootCol">
+                	<div class="navFootHead">Let Us Help You</div>
+                	<ul>
+                		<li>COVID-19 and Amazon</li>
+                		<li>Your Account</li>
+                		<li>Returns Centre</li>
+                		<li>100% Purchase Protection</li>
+                		<li>Amazon App Download</li>
+						<li>Amazon Assistant Download</li>
+						<li>Help</li>
+                	</ul>
+                </div>
+
+            </div>
+
+            <div class="logo-box">
+
+                <span>
+                	<img src="../Public/images/Daco_4533095.png" class="logoAmazonFoot">
+                </span>
+                <span>
+                	<div class="lang">
+	                	<span class="bi bi-globe2 xp"></span> <span class="eng">English</span>
+	                	<span class="bi bi-arrow-down-circle xp"></span>
+	                </div>
+                </span>
+          
+            </div>
+
+            <div class="countries">
+            	<ul>
+            		<li>Australia</li>
+            		<li>Brazil</li>
+            		<li>Canada</li>
+            		<li>China</li>
+            		<li>France</li>
+            		<li>Germany</li>
+            		<li>Italy</li>
+            		<li>Japan</li>
+            		<li>Mexico</li>
+            		<li>Netherlands</li>
+            		<li>Poland</li>
+            		<li>Singapore</li>
+            		<li>Spain</li>
+            		<li>Turkey</li>
+            		<li>United Arab Emirates</li>
+            		<li>United Kingdom</li>
+            		<li>United States</li>
+            	</ul>
+            </div>
+
+            <div class="footerDesc">
+            	<div class="footCol">
+            		<div class="footerHead"> AbeBooks</div>
+            		<p class="lh">Books, art <br>& collectibles</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> Amazon Web Services</div>
+            		<p class="lh">Scalable Cloud
+						<br> Services</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> Audible</div>
+            		<p class="lh">Download
+						<br>Audio Books</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> DPReview</div>
+            		<p class="lh">Digital
+						<br>Photography</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> IMDb</div>
+            		<p class="lh">Movies, TV
+						<br>& Celebrities</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> Shopbop</div>
+            		<p class="lh">Designer
+						<br>Fashion Brands</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> Amazon Business</div>
+            		<p class="lh">Everything For
+						<br>Your Business</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> Prime Now</div>
+            		<p class="lh">2-Hour Delivery
+						<br>on Everyday Items</p>
+            	</div>
+
+            	<div class="footCol">
+            		<div class="footerHead"> Amazon Prime Music</div>
+            		<p class="lh">70 million songs, ad-free
+						<br>Over 9 million podcast episodes</p>
+            	</div>
+
+            	
+            </div>
+    
+            <div class="footCopy">
+            	<ul>
+            		<li>Conditions of Use & Sale</li>
+            		<li>Privacy Notice</li>
+            		<li>Interest-Based Ads</li>
+            		<span>&copy 1996-2021, Amazon.com, Inc. or its affiliates</span>
+            	</ul>
+            </div>
+		</footer>
+	</body>
+</html>

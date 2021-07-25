@@ -1,0 +1,21 @@
+{
+  "name": "shoppingapplication",
+  "version": "1.0.0",
+  "description": "End to End Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "online",
+    "shopping",
+    "Website",
+    "fullstack"
+  ],
+  "author": "Narendra",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap-icons": "^1.5.0"
+  }
+}

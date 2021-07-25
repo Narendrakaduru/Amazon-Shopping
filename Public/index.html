@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- document declaration in HTML 5 -->
+<html lang="en-IN">
+<!-- Every document scope must specify which language content it is presenting. -->
+    <head>
+    <!-- Head section comprises of content, which is intended to load into memory 
+        when page is requested by client. -->
+
+        <title>Shopping Application</title>
+        <!-- It comprises of title, which is displayed in the browser title bar.
+        The title is also used in bookmarking the page. -->
+
+        <link href="./images/favicon.ico" rel="shortcut icon">
+        <!-- rel-relation -->
+        <!-- It is used to link external files to your web page. 
+            External files include short cut icons, stylesheets etc.-->
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <!-- npm i bootstrap-icons -->
+
+        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+        <!-- npm i @fortawesome/fontawesome-free -->
+
+
+        <meta name="keywords" content="Best Shopping Application, Online Shopping, Best Shopper">    
+        <meta name="description" content="Best Shopping Application in India">
+        <meta charset="utf-8">
+        <!-- utf-8 indicates english., any english us uk-->
+        <!--<meta http-equiv="refresh" content="5">-->
+        <!-- indicates the page will refresh for very few seconds-->
+        <style>
+            body{
+                margin: 0px;
+            }
+            header
+            {
+                background-color: tomato;
+                color: white;
+                font-size: 30px;
+                padding: 10px;
+                text-align: center;
+            }
+            footer
+            {
+                background-color: tomato;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                padding: 5px;
+                font-style: italic;
+
+            }
+            section
+            {
+                height: 450px;
+
+                display: grid;
+                grid-template-columns: 3fr 7fr 2fr;
+
+                margin-top: 15px;
+            }
+            menu div 
+            {
+                width: 200px;
+                border: 2px solid rgb(255, 71, 71);
+                background-color: tomato;
+                font-size: 20px;
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                padding: 5px;
+                border-radius: 10px;
+
+            }
+            menu div:hover{
+                background-color: rgb(248, 138, 118);
+                color: white;
+                cursor: grab;
+            }
+            menu{
+                margin-left: -40px;
+            }
+            aside{
+                background-color: yellow;
+                padding: 5px;
+                text-align: center;
+                border-radius: 30px;
+                
+            }
+            article{
+                background-color: green;
+                color:white;
+                width: 200px;
+                text-align: center;
+                margin-top: 100px;
+                margin-bottom: 200px;
+            }
+            figure {
+                height: 100px;
+                width: 100px;
+                border: 2px dotted;
+            }
+            dialog{
+                margin-left: 1200px;
+                margin-top: 300px;
+            }
+            footer #copy {
+                font-size: 14px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <span class="fab fa-amazon"> shopping Applicaion</span> 
+        </header>
+        <section>
+            <nav>
+                <menu>
+                    <div><span class="fa fa-home"></span> Home</div>
+                    <div><span class="bi bi-earbuds"></span> Ear Buds</div>
+                    <div><span class="fa fa-shoe-prints"></span> Foot Wear</div>
+                    <div><span class="fa fa-tshirt"></span> Fashion</div>
+                </menu>
+            </nav>
+        </section>
+        <section>
+            <div>
+                <main>
+                    <figure>
+                        <figcaption>Fig</figcaption>
+                    </figure>
+                    <div>Welcome to online Shopping</div>
+                    <article>August Sale Stats : 50% OFF</article>
+                </main>
+            </div>
+            <div>
+                <aside>
+                    <div>BoatEarpods</div>
+                    <div>70% OFF</div>
+                    <div>Visit Store</div>
+                </aside>
+                <dialog open>
+                    Help?
+                </dialog>
+            </div>
+        </section>
+        <footer>
+            <div><span class="fab fa-amazon"> Amazon India</span></div>
+            <span id="copy">&copy; copyright 2021</span>
+        </footer>
+    </body>
+</html>

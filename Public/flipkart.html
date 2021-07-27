@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flipkart Mobile Listings</title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+	<style type="text/css">
+        @font-face {
+			font-family: roboto_r;
+			src: url(../Public/fonts/Roboto-Regular.ttf);
+		}
+        @font-face {
+			font-family: roboto_m;
+			src: url(../Public/fonts/Roboto-Medium.ttf);
+		}
+		body{
+            margin: 0px;
+			font-family: roboto_r;
+		}
+        .mobile_search_result{
+            margin-top: 50px;
+        	display: grid;
+        	grid-template-columns: 2fr 2.8fr 0.2fr 4fr 3fr;
+            background-color: #fff;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 40px 0px 40px 120px;
+        }
+        .mobile_9A {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 94px;
+            height: 200px;
+        }
+        .compare{
+            font-size: 14px;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .Heart{
+			width: 20px;
+            height: 20px;
+            color: #c2c2c2;
+		}
+        .inline{
+            display: inline !important;
+        }
+        .mobile_list_specs{
+            margin-left: 15px;
+        }
+        .mobile_list_specs h3 {
+            font-family: roboto_m;
+            font-weight: 500;
+            margin-top: 0px;
+        }
+        .rating_status {
+            background-color: #388e3c;
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 6px;
+            font-family: roboto_m;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .star{
+            font-size: 10px;
+        }
+        .review{
+            font-size: 14px;
+            color: #878787;
+            font-family: roboto_m;
+        }
+        .specifications{
+            padding: 0px 18px;
+            color: #212121;
+            font-size: 14px;
+            margin-top: 18px;
+            line-height: 22px;
+        }
+        .specifications li::marker{
+            color: #C2C2C2;
+        }
+        .mobile_cost{
+            font-family: 'roboto_m';
+            font-size: 25px;
+        }
+        .offer{
+            font-size: 14px;
+            margin-top: 5px;
+            color: #878787;
+        }
+        .off {
+            color: #388e3c;
+            margin-left: 10px;
+        }
+        .assured{
+            width: 77px;
+            height: 21px;
+        }
+        .Price_list{
+            display: inline-flex;
+        }
+	</style>
+</head>
+<body>
+	<div class="mobile_search_result">
+        <div>
+
+        </div>
+		<div class="mobile_src_img">
+			<img class="mobile_9A" alt="Redmi 9A (SeaBlue, 32 GB)" src="../Public/images/mi-redmi-9a.jpeg" >
+            <div class="compare">
+                <input type="checkbox">
+                <label>Add to Compare</label>
+            </div>
+		</div>
+        <div class="Heart">
+            <span class="fa fa-heart"></span>
+        </div>
+		<div class="mobile_specifications">
+            <div class="mobile_list_specs">
+                <div>
+                    <h3>Redmi 9A (SeaBlue, 32 GB)</h3>
+                </div>
+                    
+                <div class="ratings">
+                    <div class="rating_status inline">
+                        <span>4.3</span>
+                        <span class="fa fa-star star"></span>
+                    </div>
+                    <div class="review inline">
+                        <span>10,566 Ratings &  567 Reviews</span>
+                    </div>
+                </div>
+                <div>
+                    <ul class="specifications">
+                        <li>2 GB RAM | 32 GB ROM</li>
+                        <li>16.59 cm (6.53 inch) Full HD+ Display</li>
+                        <li>13MP Rear Camera</li>
+                        <li>5000 mAh Battery</li>
+                        <li>1 Year Manufacturer  Warranty</li>
+                    </ul>
+                </div>
+            </div>
+		</div>
+		<div class="mobile_price_offers">
+			<div class="Price_list">
+                <div class="mobile_cost">
+                    <span>&#8377;7,271</span>
+                    <div class="offer">
+                        <del>&#8377;7,271</del> <span class="off">2% off</span>
+                    </div>
+                </div>
+            </div>
+            <span>
+                <img class="assured" src="../Public/images/fa_62673a.png">
+            </span>
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flipkart Flex Container</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+        }
+        .card{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 220px;
+            box-shadow: 2px 2px 2px #ccc;
+            padding: 15px;
+            margin: 10px 5px;
+            text-align: center;
+        }
+        .card-title{
+            font-weight: 700;
+            font-size: 15px;
+            color: #333;
+        }
+        .card-body{
+            color: #388e3c;
+            font-size: 16px;
+            padding-top: 10px;
+        }
+        .card-footer{
+            color: #8c8c8c;
+            font-size: 14px;
+            padding-top: 10px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img title="Levis T-shirts" src="../Public/images/levis.png">
+            <div class="card-title">
+                Levi's, Allen Solly, US Polo..
+            </div>
+            <div class="card-body">
+                50-80% Off
+            </div>
+            <div class="card-footer">
+                Shirts, Pants, Blazers...
+            </div>
+        </div>
+
+        <div class="card">
+            <img title="Levis T-shirts" src="../Public/images/tommy-hilfiger.jpeg">
+            <div class="card-title">
+                ABREXO,SKMEI & more
+            </div>
+            <div class="card-body">
+                10-50% Off
+            </div>
+            <div class="card-footer">
+                Massive Savings! Less Spending
+            </div>
+        </div>
+
+        <div class="card">
+            <img title="Levis T-shirts" src="../Public/images/varanga.jpeg">
+            <div class="card-title">
+                Saara, Libas, Gerua...
+            </div>
+            <div class="card-body">
+                60-80% Off
+            </div>
+            <div class="card-footer">
+                Kurta, Sets...
+            </div>
+        </div>
+
+        <div class="card">
+            <img title="Levis T-shirts" src="../Public/images/puma.jpg">
+            <div class="card-title">
+                Puma, Catwalk & more
+            </div>
+            <div class="card-body">
+                50-70% Off
+            </div>
+            <div class="card-footer">
+                Grab your Best Today
+            </div>
+        </div>
+
+        <div class="card">
+            <img title="Levis T-shirts" src="../Public/images/mosai.jpeg">
+            <div class="card-title">
+                Lowest Prices on Suitcases
+            </div>
+            <div class="card-body">
+                Min 70% Off
+            </div>
+            <div class="card-footer">
+                Skybags, Safari & more
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

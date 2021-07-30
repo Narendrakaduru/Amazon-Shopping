@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intra Document Navigation</title>
+        <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            @font-face {
+				font-family: amazonFont;
+				src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+			}
+            body{
+                font-family: amazonFont, Helvetica, sans-serif;
+                margin: 0px;
+            }
+            .container{
+                display: grid;
+                grid-template-columns: 3fr 9fr;
+            }
+            .left_pannel{
+                margin-right: 20px;
+            }
+            .right_pannel{
+                overflow: scroll;
+                height: 520px;
+                margin-top: 20px;
+            }
+            ul{
+                list-style: none;
+                margin-top: 0px;
+                padding-left: 0px;
+            }
+            li{
+
+            }
+            li a{
+                background-color: #27282A;
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                padding: 20px;
+            }
+            li a:hover{
+                background-color: #363B3F;
+            }
+            header{
+                background-color: #3E454C;
+                color: white;
+                padding: 5px;
+                text-align: center;
+
+            }
+            h3{
+                margin: 0px;
+            }
+            .img_align{
+                float: right;
+                width: 200px;
+                height: 200px;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2><span class="bi bi-cart4"></span> Amazon Shopping</h2>
+        </header>
+        <div class="container">
+            <div class="left_pannel">
+                <ul>
+                    <li><a href="#home"><span class="bi bi-house"></span> &nbsp Home</a></li>
+                    <li><a href="#electronics"><span class="bi bi-laptop"></span> &nbsp Electronics</a></li>
+                    <li><a href="#footwear"><span class="fa fa-shoe-prints"></span> &nbsp Footwear</a></li>
+                    <li><a href="#fashion"><span class="fa fa-tshirt"></span> Fashion</a></li>
+                </ul>
+            </div>
+
+            <div class="right_pannel">
+                <div>
+                    <h3 id="home">Home</h3>
+                    <img src="../Public/images/home.jpg" class="img_align">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                </div>
+
+                <div>
+                    <h3 id="electronics">Electronics</h3>
+                    <img src="../Public/images/Laptop.jpg" class="img_align">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                </div>
+
+                <div>
+                    <h3 id="footwear">Footwear</h3>
+                    <img src="../Public/images/puma.jpg" class="img_align">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                </div>
+
+                <div>
+                    <h3 id="fashion">Fashion</h3>
+                    <img src="../Public/images/varanga.jpeg" class="img_align">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, officiis. Debitis quia vitae, repellendus ex, nihil labore maxime error deserunt sequi, aut voluptate ducimus dolorum id tempora enim pariatur quaerat.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

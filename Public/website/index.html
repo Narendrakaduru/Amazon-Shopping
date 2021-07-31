@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Shopping</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+		}
+        body{
+            font-family: amazonFont, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        header{
+            background-color: #3E454C;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        a{
+            background-color: #27282A;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
+            width: 75%;
+        }
+        a:hover{
+            background-color: #363B3F;
+        }
+        iframe{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> <span class="bi bi-cart4"></span> Amazon Shopping</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="home.html" target="framebody"><span class="bi bi-house"></span> &nbsp  Home</a></li>
+                <li><a href="electronics.html" target="framebody"><span class="bi bi-laptop"></span> &nbsp  Electronics</a></li>
+                <li><a href="footwear.html" target="framebody"><span class="fa fa-shoe-prints"></span> &nbsp Footwear</a></li>
+                <li><a href="fashion.html" target="framebody"><span class="fa fa-tshirt"></span> &nbsp  Fashion</a></li>
+                <li><a href="https://www.youtube.com/embed/xhAzPovw6uM" target="framebody"><span class="fab fa-amazon"></span> &nbsp Amazon Prime</a></li>
+            </ul>
+        </nav>
+        <main>
+            <iframe src="home.html" name="framebody" frameborder="0" width="100%" height="450"></iframe>
+        </main>
+    </section>
+    <div>
+        <iframe src="../myfooter.html" frameborder="0" height="715px"></iframe>
+    </div>
+</body>
+</html>

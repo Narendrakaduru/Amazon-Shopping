@@ -35,11 +35,12 @@
         .nav_bar ul li {
             position: relative;
             display: inline-block;
-            width: 75%;
+            width: 90%;
             line-height: 20px;
         }
         
-        .nav_bar ul li a:hover::before{
+        .nav_bar ul li a:hover::before, 
+        .nav_bar ul li a.active::before {
             background-color: #4284C7;
             position: absolute;
             content: '';
@@ -54,10 +55,17 @@
             color: #fff;
             text-decoration: none;
             padding: 20px;
-            width: 75%;
+            width: 90%;
         }
         a:hover{
             background-color: #363B3F;
+        }
+        .nav_bar ul li a.active{
+            background-color: #363B3F;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 20px;
         }
         iframe{
             width: 100%;
@@ -71,8 +79,8 @@
     <section>
         <nav class="nav_bar">
             <ul>
-                <li><a href="home.html" target="framebody" class="active"><span class="bi bi-house"></span> &nbsp  Home</a></li>
-                <li><a href="electronics.html" target="framebody"><span class="bi bi-laptop"></span> &nbsp  Electronics</a></li>
+                <li><a href="home.html" target="framebody"><span class="bi bi-house"></span> &nbsp  Home</a></li>
+                <li><a href="electronics.html" target="framebody" class="active"><span class="bi bi-laptop"></span> &nbsp  Electronics</a></li>
                 <li><a href="footwear.html" target="framebody"><span class="fa fa-shoe-prints"></span> &nbsp Footwear</a></li>
                 <li><a href="fashion.html" target="framebody"><span class="fa fa-tshirt"></span> &nbsp  Fashion</a></li>
                 <li><a href="https://www.youtube.com/embed/xhAzPovw6uM" target="framebody"><span class="fab fa-amazon"></span> &nbsp Amazon Prime</a></li>

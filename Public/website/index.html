@@ -26,10 +26,27 @@
             display: grid;
             grid-template-columns: 3fr 9fr;
         }
-        ul {
+        .nav_bar ul {
             list-style: none;
             padding: 0px;
             margin: 0px;
+            position: relative;
+        }
+        .nav_bar ul li {
+            position: relative;
+            display: inline-block;
+            width: 75%;
+            line-height: 20px;
+        }
+        
+        .nav_bar ul li a:hover::before{
+            background-color: #4284C7;
+            position: absolute;
+            content: '';
+            height: 100%;
+            top: 0;
+            left: 0;
+            width: 4px;
         }
         a{
             background-color: #27282A;
@@ -52,9 +69,9 @@
         <h1> <span class="bi bi-cart4"></span> Amazon Shopping</h1>
     </header>
     <section>
-        <nav>
+        <nav class="nav_bar">
             <ul>
-                <li><a href="home.html" target="framebody"><span class="bi bi-house"></span> &nbsp  Home</a></li>
+                <li><a href="home.html" target="framebody" class="active"><span class="bi bi-house"></span> &nbsp  Home</a></li>
                 <li><a href="electronics.html" target="framebody"><span class="bi bi-laptop"></span> &nbsp  Electronics</a></li>
                 <li><a href="footwear.html" target="framebody"><span class="fa fa-shoe-prints"></span> &nbsp Footwear</a></li>
                 <li><a href="fashion.html" target="framebody"><span class="fa fa-tshirt"></span> &nbsp  Fashion</a></li>

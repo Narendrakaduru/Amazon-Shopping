@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Merge</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+			}
+	    	body{
+	    	margin: 0px;
+            font-family: amazonFont, Helvetica, sans-serif;
+	    }      
+        table{
+            margin-top: 20px;
+        }      
+        </style>
+    </head>
+    <body>
+        <table rules="all" frame="box" cellpadding="5" width="900" align="center">
+            <thead>
+                <tr>
+                    <td rowspan="3" align="center">Head Section</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Name</th>
+                    <th colspan="3">Address</th>
+                </tr>
+                <tr align="center">
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>City</td>
+                    <td>State</td>
+                    <td>Postal Code</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="6" align="center">Body Section</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td rowspan="2" align="center">Footer Section</td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="center">&copy; Copyright 2021</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

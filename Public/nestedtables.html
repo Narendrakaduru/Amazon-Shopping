@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Tables</title>
+    <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+			}
+	    	body{
+	    	margin: 0px;
+            font-family: amazonFont, Helvetica, sans-serif;
+	    }
+        .main-table{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        table ,tr , td , thead , tbody ,tfoot {
+            border: 1px solid #d8d8d8;
+        }
+    </style>
+</head>
+<body>
+    <table class="main-table" width="50%" border="1" cellspacing="10" cellpadding="10" border="#eaeaea">
+        <tr height="150"> 
+            <td width=150 align="center">
+                <img src="../Public/images/Laptop.jpg" alt="Laptop">
+            </td>
+            <td>
+                <table rules="all" frame="box" height="100" cellspacing="10" cellpadding="10" align="center" width=400>
+                    <tr>
+                        <th>Name</th>
+                        <td>Dell Laptop</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>56000</td>
+                    </tr>
+                    <tr>
+                        <th>Stock</th>
+                        <td>Available</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr height="150"> 
+            <td width=150 align="center">
+                <img src="../Public/images/mi-redmi-9a.jpeg" alt="Mobile" width=90 height=200>
+            </td>
+            <td>
+                <table rules="all" frame="box" height="100" cellspacing="10" cellpadding="10" align="center" width=400>
+                    <tr>
+                        <th>Name</th>
+                        <td>Redmi Mobile</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>7000</td>
+                    </tr>
+                    <tr>
+                        <th>Stock</th>
+                        <td>Available</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+    <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+        }
+        body{
+            font-family: amazonFont, Helvetica, sans-serif;
+            margin: 0px;
+            background-color: #ccc;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            margin-top: 30px;
+        }
+        .form-container{
+            width: 512px;
+        }
+        .form-header{
+            background-color: #363B3F;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .form-header h3{
+            margin: 0px;
+        }
+        .form-body{
+            background-color: #fff;
+            padding: 25px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .form-group{
+            margin-bottom: 15px;
+        }
+        .form-control, .form-control:active, .form-control:focus {
+            margin-top: 5px;
+            width: 92%;
+            color: #5a5a5a;
+            background-color: #e7e7e7;
+            font-size: 15px;
+            border: 0px;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none !important;
+        }
+        .label-name{
+            color: #c7c7c7;
+            font-size: 13px;
+        }
+        .split{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .split .form-control{
+            width: auto;
+        }
+        ul{
+            list-style: none;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            height: 100px;
+            width: 55%;
+            padding: 10px;
+            border: 1px solid #c7c7c7;
+            overflow: auto;
+        }
+        .frm-btn{
+            background-color: #E74957;
+            border: 0px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .terms + label {
+            color: red;
+        }
+        .terms:checked + label{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form action="get" action="page.php">
+        <!-- GET used to fetch data from Server, POST used to submit data to Server-->
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h3>Student Registration Form</h3>
+                </div>
+                <div class="form-body">
+                    <div class="split">
+
+                        <div class="form-group">
+                            <label for="FirstName" class="label-name">First Name</label>
+                            <div>
+                                <input type="text" class="form-control" name="FirstName" placeholder="FirstName">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="LastName" class="label-name">Last Name</label>
+                            <div>
+                                <input type="text" class="form-control" name="LastName" placeholder="LastName">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="UserName" class="label-name">User Name</label>
+                        <div>
+                            <input type="text" pattern="\w{4,10}" class="form-control" name="UserName" placeholder="UserName">
+                        </div>
+                    </div>
+
+                    <div class="split">
+                        <div class="form-group">
+                            <label for="Password" class="label-name">Password</label>
+                            <div>
+                                <input type="password" class="form-control" name="Password" placeholder="Password">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="Phone" class="label-name"> PhoneNumber</label>
+                            <div>
+                                <input type="text" pattern="(\+91)[0-9]{10}" class="form-control" name="Phone" placeholder="PhoneNumber">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="label-name"> Gender</label>
+                        <div>
+                            <input type="radio"  name="gender" value="male"> Male
+                            <input type="radio"  name="gender" value="female"> Female
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course" class="label-name"> Courses Prefered</label>
+                        <div>
+                            <ul>
+                                <li><input type="checkbox">Html</li>
+                                <li><input type="checkbox">CSS</li>
+                                <li><input type="checkbox">JavaScript</li>
+                                <li><input type="checkbox">jQuery</li>
+                                <li><input type="checkbox">Bootstrap</li>
+                                <li><input type="checkbox">Html</li>
+                                <li><input type="checkbox">CSS</li>
+                                <li><input type="checkbox">JavaScript</li>
+                                <li><input type="checkbox">jQuery</li>
+                                <li><input type="checkbox">Bootstrap</li>
+                                <li><input type="checkbox">Html</li>
+                                <li><input type="checkbox">CSS</li>
+                                <li><input type="checkbox">JavaScript</li>
+                                <li><input type="checkbox">jQuery</li>
+                                <li><input type="checkbox">Bootstrap</li>
+                                <li><input type="checkbox">Html</li>
+                                <li><input type="checkbox">CSS</li>
+                                <li><input type="checkbox">JavaScript</li>
+                                <li><input type="checkbox">jQuery</li>
+                                <li><input type="checkbox">Bootstrap</li>
+                                <li><input type="checkbox">Html</li>
+                                <li><input type="checkbox">CSS</li>
+                                <li><input type="checkbox">JavaScript</li>
+                                <li><input type="checkbox">jQuery</li>
+                                <li><input type="checkbox">Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Photo" class="label-name">Upload Photo</label>
+                        <div>
+                            <input type="file" accept="image/jpg, image/png" multiple size="4194304" class="form-control" name="Photo" placeholder="Upload Photo">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Course" class="label-name">Course</label>
+                        <div>
+                            <input type="text" class="form-control" list="courses-list" name="Course" placeholder="Course">
+                            <datalist id="courses-list">
+                                <option value="JavaScript"> JavaScript</option>
+                                <option value="HTML"> HTML</option>
+                                <option value="CSS"> CSS</option>
+                                <option value="jQuery"> jQuery</option>
+                            </datalist>
+                        </div>
+                    </div>
+
+                    <div class="split">
+                        <div class="form-group">
+                            <label for="TestExpression" class="label-name">Test Expression </label>
+                            <div>
+                                <input type="text" pattern="^colou?r$" class="form-control" name="TestExpression" placeholder="Enter color or colour">
+                            </div>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="Test" class="label-name">Test Expression </label>
+                            <div>
+                                <input type="text" pattern=".at" class="form-control" name="Test" placeholder="cat, rat, mat, bat">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div>
+                            <input type="checkbox" class="terms"  name="terms"> <label>I Accept Terms And Conditions</label>
+                        </div>
+                    </div>
+
+                    <button class="frm-btn">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

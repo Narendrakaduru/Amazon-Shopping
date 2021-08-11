@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Inox Movies</title>
+    <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+        }
+        body{
+            font-family: amazonFont, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        .container-main{
+            background:url(../Public/images/inoxgift.png);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        .container{
+            position: absolute;
+            width: 66%;
+            top: 350px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+        }
+        .search-item{
+            border: 1px solid #d0d0d0;
+            padding: 8px;
+            font-size: 14px;
+            margin-right: 12px;
+            display: inline-block;
+            border-radius: 3px;
+            color: #ececec;
+        }
+        .search-item:hover{
+            cursor: pointer;
+        }
+        .search-item .select{
+            float: left;
+        }
+        .search-item .dropdown{
+            float: right;
+            border-left: 1px solid #d0d0d0;
+            margin-left: 15px;
+        }
+        .search-item .dropdown .bi{
+            margin-left: 8px;
+        }
+        .btn{
+            display: inline;
+            float: right;
+        }
+        .btn-book{
+            background-color: #E62E30;
+            padding: 8px 42px;
+            color: #fff;
+            font-size: 14px;
+            border: 1px solid #e62e30;
+            outline: 0;
+            border-radius: 3px;
+        }
+        .btn-book:hover{
+            cursor: pointer;
+            background-color: #FEFF35;
+            border: 1px solid #FEFF35;
+            color: #111;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container">
+            
+            <div class="search-item">
+                <div class="select">
+                    <span>Select Movie</span>
+                </div>
+                <div class="dropdown">
+                    <span class="bi bi-chevron-down"></span>
+                </div>
+            </div>
+
+            <div class="search-item">
+                <div class="select">
+                    <span>Select Cinema</span>
+                </div>
+                <div class="dropdown">
+                    <span class="bi bi-chevron-down"></span>
+                </div>
+            </div>
+
+            <div class="search-item">
+                <div class="select">
+                    <span>Select Date</span>
+                </div>
+                <div class="dropdown">
+                    <span class="bi bi-chevron-down"></span>
+                </div>
+            </div>
+
+            <div class="search-item">
+                <div class="select">
+                    <span>Select Timing</span>
+                </div>
+                <div class="dropdown">
+                    <span class="bi bi-chevron-down"></span>
+                </div>
+            </div>
+
+            <div class="search-item">
+                <div class="select">
+                    <span>Select Seats</span>
+                </div>
+                <div class="dropdown">
+                    <span class="bi bi-chevron-down"></span>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button class="btn-book"> BOOK</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

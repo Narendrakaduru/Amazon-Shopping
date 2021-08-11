@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign In</title>
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+        }
+        body{
+            font-family: amazonFont, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        .container-main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .container{
+            width: 350px;
+        }
+        .header-logo{
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .form-group{
+            margin-bottom: 15px;
+        }
+        .form-group label{
+            color: #111;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .form-body{
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-body h3{
+            color: #111;
+            font-size: 25px;
+            font-weight: 400;
+            margin: 0px 0px 10px 0px;
+        }
+        .form-control{
+            margin-top: 5px;
+            width: 100%;
+            height: 0px;
+            padding: 15px 5px;
+            border: 1px solid #a6a6a6;
+            border-top-color: #949494;
+            box-sizing: border-box;
+            border-radius: 3px;
+            box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+            outline: 0;
+        }
+        .form-control:focus, .form-control:active {
+            border-color: #e77600;
+            box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+        }
+        .btn-amazon{
+            background: #f0c14b;
+            background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+            color: #111;
+            width: 100%;
+            outline: 0px;
+            border: 1px solid #a88734;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .btn-amazon:hover{
+            cursor: pointer;
+            background: #f0c14b;
+            border-color: #a88734 #9c7e31 #846a29;
+            background: linear-gradient(to bottom,#f5d78e,#eeb933);
+            color: #111;
+        }
+        a{
+            text-decoration: none;
+            color: #0066c0;
+        }
+        a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+            color: #c45500;
+        }
+        .terms{
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+        .help{
+            font-size: 13px;
+            margin-top: 12px;
+        }
+        summary::marker{
+            font-size: 10px;
+        }
+        ul{
+            line-height: 1.8;
+            list-style: none;
+            margin: 10px;
+            padding: 0px;
+        }
+        .divider{
+            text-align: center;
+            position: relative;
+            top: 2px;
+            padding-top: 1px;
+            margin-bottom: 14px;
+            line-height: 0;
+        }
+        .divider::after{
+            content: "";
+            width: 100%;
+            background-color: transparent;
+            display: block;
+            height: 1px;
+            border-top: 1px solid #e7e7e7;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+            z-index: 1;
+        }
+        .divider h3{
+            line-height: 1;
+            font-size: 12px;
+            color: #767676;
+            font-weight: 400;
+            z-index: 2;
+            position: relative;
+            display: inline-block;
+            background-color: #fff;
+            padding: 0 8px 0 7px;
+        }
+        .create-account{
+            background: #e7e9ec;
+            border-radius: 3px;
+            border: 1px solid #adb1b8;
+            background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .create-account:hover{
+            cursor: pointer;
+            border-color: #a2a6ac #979aa1 #82858a;
+            background: linear-gradient(to bottom,#e7eaf0,#d9dce1);
+        }
+        .footer-main{
+            margin-top: 25px;
+            border-top: 1px solid #ccc;
+            height: 120px;
+        }
+        .footer-divider-inner{
+            background: linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
+            z-index: 0;
+            height: 44px;
+            margin-bottom: -18px;
+            zoom: 1;
+        }
+        .footer-divider-inner:after{
+            display: block;
+            width: 100%;
+            height: 44px;
+            background-color: transparent;
+            background: -webkit-linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+            background: linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+            z-index: 1;
+            content: "";
+        }
+        .align-center{
+            text-align: center;
+            font-size: 11px;
+        }
+        .align-center span{
+            margin-right: 20px;
+        }
+        .blk{
+            color: #111;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        <div class="container">
+            <div class="header-logo">
+                <img src="../Public/images/amazon-logo.PNG" alt="amazonlogo">
+            </div>
+            <div class="form-body">
+                <form action="get">
+                    <h3>Sign-In</h3>
+                    <div class="form-group">
+                        <label for="Email" class="label-name">Email or mobile phone number</label>
+                        <div>
+                            <input type="text" class="form-control" name="Email" pattern="">
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="btn-amazon">Continue</button>
+                    </div>
+
+                    <div class="terms">
+                        By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice.</a>
+                    </div>
+
+                    <div class="help">
+                        <details>
+                            <summary><a href="#">Need Help?</a></summary>
+                            <ul>
+                                <li><a href="#">Forgot Password</a></li>
+                                <li><a href="#">Other issue with Sign-In</a></li>
+                            </ul>
+                        </details>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="divider">
+                <h3>New to Amazon?</h3>
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="create-account">Create your Amazon account</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-main">
+        <div class="footer-divider">
+            <div class="footer-divider-inner">
+
+            </div>
+        </div>
+        <div class="align-center">
+            <span><a href="#"> Conditions of Use</a></span>
+            <span><a href="#"> Privacy Note</a></span>
+            <span><a href="#"> Help</a></span>
+        </div>
+        <div class="align-center blk">
+            &copy; 1996-2021, Amazon.com, Inc. or its affiliates
+        </div>
+    </div>
+</body>
+</html>

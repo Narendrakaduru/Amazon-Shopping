@@ -86,10 +86,16 @@
             font-size: 14px;
             margin-top: 20px;
         }
+        .frm-btn:hover{
+            cursor: pointer;
+        }
         .terms + label {
+            color: #5a5a5a;
+        }
+        .terms + label>span{
             color: red;
         }
-        .terms:checked + label{
+        .terms:checked + label>span{
             color: green;
         }
     </style>
@@ -222,7 +228,7 @@
                     
                     <div class="form-group">
                         <div>
-                            <input type="checkbox" class="terms"  name="terms"> <label>I Accept Terms And Conditions</label>
+                            <input type="checkbox" class="terms"  name="terms"> <label><span>I Accept</span> Terms And Conditions</label>
                         </div>
                     </div>
 

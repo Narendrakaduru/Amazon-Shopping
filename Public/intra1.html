@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra Document</title>
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <style>
+        @font-face {
+			font-family: amazonFont;
+			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
+		}
+        *{
+            font-family: amazonFont, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+        li a{
+            text-decoration: none;
+            background-color: #3E454C;
+            color: #fff;
+            display: block;
+            width: 150px;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .box{
+            border: 1px solid #45484b;
+            padding: 15px;
+            background-color: #3E454C;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .box:target{
+            background-color: #27282A;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <ul>
+                <li><a href="#html"><i class="fab fa-html5"></i> HTML</a></li>
+                <li><a href="#css"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                <li><a href="#js"><i class="fab fa-js"></i> Java Script</a></li>
+            </ul>
+        </div>
+        <div>
+            <div id="html" class="box">
+                <h2>HTML</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas veritatis adipisci delectus illo? Nostrum aliquam adipisci harum quod maiores laborum, debitis vero unde illo impedit suscipit explicabo, est inventore!</p>
+            </div>
+            <div id="css" class="box">
+                <h2>CSS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas veritatis adipisci delectus illo? Nostrum aliquam adipisci harum quod maiores laborum, debitis vero unde illo impedit suscipit explicabo, est inventore!</p>
+            </div>
+            <div id="js" class="box">
+                <h2>Java Script</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quas veritatis adipisci delectus illo? Nostrum aliquam adipisci harum quod maiores laborum, debitis vero unde illo impedit suscipit explicabo, est inventore!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

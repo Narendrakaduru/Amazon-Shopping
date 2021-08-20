@@ -7,13 +7,30 @@
     <title>Background Image</title>
     <style>
         .container{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            margin: 40px;
+        }
+        .border1{
             border: 15px solid transparent;
             border-image: url(../Public/images/border.png) 80 round;
+            padding: 2px;
+        }
+        .border2{
+            border: 18px solid transparent;
+            border-image: url(../Public/images/border1.png) 65 round;
             padding: 2px;
         }
     </style>
 </head>
 <body>
-    <img class="container" src="../Public/images/Laptop.jpg" alt="laptop">
+    <div class="container">
+        <div>
+            <img class="border1" src="../Public/images/Laptop.jpg" alt="laptop" width="400px" height="400px">
+        </div>
+        <div>
+            <img class="border2" src="../Public/images/levis.png" alt="levies" width="400px" height="400px">
+        </div>
+    </div>
 </body>
 </html>

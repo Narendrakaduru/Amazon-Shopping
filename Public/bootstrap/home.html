@@ -6,13 +6,106 @@
     <title>Bootstrap</title>
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .bg{
+            background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../../Public/images/netflixback.jpg);
+        }
+        .box{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="m-3 border border-4 border-primary bg-primary text-white p-4">
+        <div class="m-3 border border-4 border-danger bg-primary text-white p-4">
             <h4 class="text-center">Bootstrap 5</h4>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni officiis eius reiciendis a ipsa labore! Doloremque, laudantium placeat. Aperiam consequuntur quia aspernatur doloremque minus consectetur placeat accusantium. Numquam, hic neque.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere doloribus fugit odit incidunt exercitationem, ipsum pariatur laudantium atque et alias ex nobis quod harum eos error quis sed autem beatae laboriosam, recusandae odio! Officia cum mollitia, ab velit consequuntur id, tenetur repudiandae facilis iure laborum exercitationem quos voluptates sunt, voluptas aspernatur libero perspiciatis? Magnam natus in maxime earum provident atque quibusdam debitis nemo harum, iusto fugiat quam ullam et aperiam quae enim? Aperiam a doloremque velit saepe assumenda aspernatur est laudantium qui tempore recusandae natus aliquam error reiciendis neque vel rem minus, consequuntur fugit aut eligendi ratione facilis. Dignissimos deserunt voluptates dolorem est veritatis, sed earum dolore quae esse voluptatem sapiente. Et pariatur explicabo in? Id neque cumque culpa nihil odio maiores ad harum, alias aperiam voluptatum tempore at dolore quis officiis ipsam sit perferendis aliquid doloribus quia. Impedit ipsum assumenda, tempore vitae fuga non! Aliquam et ab nisi ex ad earum praesentium, voluptatibus nulla ipsum, aliquid est aperiam sequi. Quidem nesciunt quis eveniet vero eos reiciendis nam assumenda, accusantium nulla nisi. Repellat et, distinctio consequuntur sequi assumenda tenetur iure corporis a cumque soluta perferendis rerum, atque aliquid laboriosam officiis consectetur eos sunt sit, earum vitae in deleniti temporibus voluptatibus.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="m-3  border border-4 border-danger p-4">
+            <h3>Button Colors</h3>
+            <button class="btn btn-primary">Insert</button>
+            <button class="btn btn-success">Update</button>
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-link">Signout</button>
+            <button class="btn btn-close"></button>
+
+            <h3>Button Size</h3>
+            <button class="btn btn-primary btn-lg">Insert</button>
+            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-primary btn-sm">Delete</button>
+
+            <h3>Outline Buttons</h3>
+            <button class="btn btn-outline-primary">Insert</button>
+            <button class="btn btn-outline-success">Update</button>
+            <button class="btn btn-outline-danger">Delete</button>
+
+            <h3>Button Group</h3>
+            <div class="btn-group">
+                <button class="btn btn-primary">Insert</button>
+                <button class="btn btn-success">Update</button>
+                <button class="btn btn-danger">Delete</button>
+            </div>
+
+            <h3>Button Toolbar</h3>
+            <div class="btn-toolbar bg-dark justify-content-between">
+                <div class="btn-group">
+                    <button class="btn btn-dark"><span class="bi bi-house-door-fill"></span> Home</button>
+                    <button class="btn btn-dark"><span class="bi bi-facebook"></span> Facebook</button>
+                    <button class="btn btn-dark"><span class="bi bi-twitter"></span> Twitter</button>
+                </div>
+                <div class="btn-group">
+                    <div class="btn btn-dark"><span class="bi bi-person"></span> Login</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="m-3  w-50 border border-4 border-danger p-4">
+            <h3>Register User</h3>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" class="w-100"></dd>
+            </dl>
+            <div>
+                <button class="btn btn-primary w-100">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="bg m-3 border border-4 border-danger p-4">
+            <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                <h2 class="text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nulla!</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="m-3 border border-4 border-danger p-4">
+            <div class="d-flex flex-wrap flex-row justify-content-between">
+                <div class="box">Card-1</div>
+                <div class="box">Card-2</div>
+                <div class="box">Card-3</div>
+                <div class="box">Card-4</div>
+                <div class="box">Card-5</div>
+                <div class="box">Card-6</div>
+                <div class="box">Card-7</div>
+                <div class="box">Card-8</div>
+                <div class="box">Card-9</div>
+                <div class="box">Card-10</div>
+            </div>
         </div>
     </div>
     <script src="../../node_modules/jquery/dist/jquery.js"></script>

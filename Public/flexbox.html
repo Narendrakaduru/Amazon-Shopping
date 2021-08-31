@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox-CSS</title>
+    <style>
+        @media all and (min-width: 768px) {
+            .container-1{
+                display: flex;
+            }
+        }
+        .container-2{
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .container-2{
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .container-3{
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .container-4{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container-5{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container-6{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .container-6 .box{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
+            background-color: teal;
+            border: 1px solid #888;
+        }
+        .container-box{
+            width: 25%;
+        }
+
+        .container-box-flex-basis{
+            flex-basis: 25%;
+        }
+
+        .container-1 div, .container-2 div, .container-3 div, .container-4 div, .container-5 div{
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .box-1{
+            flex:2; /*Sets the column width of a div*/ 
+            order: 2;/*Sets the Order of a div*/ 
+        }
+        .box-2{
+            flex:1;
+            order: 1;
+        }
+        .box-3{
+            flex:1;
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Default align-items:strech</h2>
+    <div class="container-1">
+        <div class="box-1">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="box-2">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="box-3">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+    </div>
+
+    <h2>align-items:flex-start</h2>
+    <div class="container-2">
+        <div class="box-1">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="box-2">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="box-3">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+    </div>
+
+    <h2>align-items:flex-end</h2>
+    <div class="container-3">
+        <div class="box-1">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="box-2">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="box-3">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+    </div>
+
+    <h2>align-items:center, justify-content: space-between</h2>
+    <div class="container-4">
+        <div class="container-box">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="container-box">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="container-box">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+    </div>
+
+    <h2>Using flex-basis Instead of width</h2>
+    <div class="container-5">
+        <div class="container-box-flex-basis">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="container-box-flex-basis">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+
+        <div class="container-box-flex-basis">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, illum.</p>
+        </div>
+    </div>
+
+    <h2>flex wrap</h2>
+    <div class="container-6">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

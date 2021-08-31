@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <style>
+        .form-control:focus{
+            box-shadow: unset;
+        }
         .bg{
             background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../../Public/images/netflixback.jpg);
         }
@@ -105,6 +108,42 @@
                 <div class="box">Card-8</div>
                 <div class="box">Card-9</div>
                 <div class="box">Card-10</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="m-3 border border-4 border-danger p-4">
+            <h3>Amazon Search</h3>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="w-75">
+                    <div class="input-group">
+                        <select name="" id="" class="input-group-text">
+                            <option value="">All</option>
+                            <option value="">Electronics</option>
+                            <option value="">Footwear</option>
+                        </select>
+                        <input type="text" class="form-control">
+                        <button class="btn btn-warning">
+                            <span class="bi bi-search"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="m-3 border border-4 border-danger p-4">
+            <h3>Netflix Search</h3>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="w-75">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control">
+                        <button class="btn btn-danger">
+                           Get Started <span class="bi bi-chevron-right"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

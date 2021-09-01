@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Cards</title>
+    <style>
+        .card{
+            width: 250px;
+        }
+        img{
+            height: 200px;
+        }
+        .card-header h4{
+            font-size: 18px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex flex-row flex-wrap">
+            <div class="card m-2">
+                <img src="../images/Nike.jpg" alt="Nike" class="card-img-top">
+                <div class="card-header">
+                    <h4>Nike Casuals</h4>
+                </div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Price</dt>
+                        <dd>5600.55</dd>
+                        <dt>Stock</dt>
+                        <dd>Available</dd>
+                    </dl>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart3"></span> Add to cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="../images/varanga.jpeg" alt="Nike" class="card-img-top">
+                <div class="card-header">
+                    <h4>Dress</h4>
+                </div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Price</dt>
+                        <dd>5600.55</dd>
+                        <dt>Stock</dt>
+                        <dd>Available</dd>
+                    </dl>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart3"></span> Add to cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="../images/tommy-hilfiger.jpeg" alt="Nike" class="card-img-top">
+                <div class="card-header">
+                    <h4>Watch</h4>
+                </div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Price</dt>
+                        <dd>5600.55</dd>
+                        <dt>Stock</dt>
+                        <dd>Available</dd>
+                    </dl>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart3"></span> Add to cart
+                    </button>
+                </div>
+            </div>
+
+            <div class="card m-2">
+                <img src="../images/Nike.jpg" alt="Nike" class="card-img-top">
+                <div class="card-header">
+                    <h4>Nike Casuals</h4>
+                </div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Price</dt>
+                        <dd>5600.55</dd>
+                        <dt>Stock</dt>
+                        <dd>Available</dd>
+                    </dl>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart3"></span> Add to cart
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="carousel slide carousel-dark" id="topbanner" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/banners/banner1.png" alt="banner1" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/banners/banner2.png" alt="Banner2" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/banners/banner3.png" alt="Banner3" class="d-block w-100">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#topbanner">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#topbanner">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            <div class="carousel-indicators">
+                <button data-bs-target="#topbanner" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#topbanner" data-bs-slide-to="1"></button>
+                <button data-bs-target="#topbanner" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

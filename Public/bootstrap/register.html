@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Register User</title>
+    <style>
+        .form-control:focus{
+            box-shadow: unset;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center align-items-center">
+            <form class="register w-25">
+                <h3>Register User</h3>
+                <div class="mt-2">
+                    <label for="User Name" class="form-label">User Name</label>
+                    <div>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <label for="Password" class="form-label">Password</label>
+                    <div>
+                        <input type="Password" class="form-control">
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <label for="Email" class="form-label">Email</label>
+                    <div>
+                        <input type="email" class="form-control">
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <label for="city" class="form-label">Select City</label>
+                    <div>
+                        <select name="city" id="city" class="form-select">
+                            <option value="delhi">Delhi</option>
+                            <option value="Hyd">Hyd</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <label for="online" class="form-check-label">Online</label>
+                    <div class="form-switch">
+                        <input type="checkbox" class="form-check-input"> <label for="yes"> yes</label>
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <label class="form-label">Price Range</label>
+                    <div>
+                        <input type="range" class="form-range">
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <label class="form-label">Choose Color</label>
+                    <div>
+                        <input type="color" class="form-control-color">
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <button class="btn btn-primary w-100">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

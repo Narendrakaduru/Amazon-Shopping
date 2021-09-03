@@ -11,6 +11,9 @@
             display: flex;
             align-items: center;
         }
+        .accordion-button:focus, .form-control:focus{
+            box-shadow: unset;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +65,7 @@
         </div>
     </div>
 
-    <div class="container mt--5">
+    <div class="container mt-5">
         <div>
             <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#login">Login</button>
             <div class="modal" id="login">
@@ -98,6 +101,91 @@
                             <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                dropdown
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Action <span class="bi bi-chevron-right"></span> </a></li>
+                <li><a href="#" class="dropdown-item">Other Action <span class="bi bi-chevron-right"></span> </a></li>
+                <li><a href="#" class="dropdown-item">And Other Action <span class="bi bi-chevron-right"></span> </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                dropdown
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Home</a></li>
+                <li><a href="#" class="dropdown-item">Services</a></li>
+                <li><a href="#" class="dropdown-item">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">
+                dropdown
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">menu1</a></li>
+                <li><a href="#" class="dropdown-item">menu2</a></li>
+                <li><a href="#" class="dropdown-item">menu3</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="w-50">
+                <div class="accordion" id="topics">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header d-block">
+                            <button class="accordion-button" data-bs-target="#html" data-bs-toggle="collapse">
+                                HTML Tutorial
+                            </button>
+                        </h2>
+                        <div class="collapse accordion-collapse" id="html" data-bs-parent="#topics">
+                            <div class=" accordion-body">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum neque temporibus voluptatibus ratione blanditiis iure, quae iste voluptate aspernatur qui.</p>
+                            </div>                     
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class=" accordion-header d-block">
+                            <button class=" accordion-button" data-bs-target="#css" data-bs-toggle="collapse">
+                                CSS Tutorial
+                            </button>
+                        </h2>
+                        <div class="collapse accordion-collapse" id="css" data-bs-parent="#topics">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus soluta ratione quam atque culpa? Esse placeat quos voluptatum unde quis!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class=" accordion-header d-block">
+                            <button class=" accordion-button" data-bs-target="#js" data-bs-toggle="collapse">
+                                JS Tutorial
+                            </button>
+                        </h2>
+                        <div class="collapse accordion-collapse" id="js" data-bs-parent="#topics">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus soluta ratione quam atque culpa? Esse placeat quos voluptatum unde quis!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

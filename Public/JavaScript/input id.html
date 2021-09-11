@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            document.getElementById("nike-img").src = "../images/Nike.jpg";
+            document.getElementById("btn-reg").value = "Register";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <img id="nike-img" name="nike" src="" alt="" width="100" height="100">
+    <div>
+        <form action="#" name="frmReg">
+            <h3>Register</h3>
+            Name : <input type="text"> <input name="reg" type="button" id="btn-reg">
+        </form>
+    </div>
+    <div>
+        <form action="#">
+            <h3>Login</h3>
+            <input type="email"> <input type="button" id="btn-login">
+        </form>
+    </div>
+</body>
+</html>

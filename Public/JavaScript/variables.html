@@ -1,0 +1,16 @@
+<script>
+    "use strict";
+    function f1(){
+        var x;      // declaring
+        x = 10;     // assigning
+        z = 40;     // assigning
+        var z;      // hoisting
+        if(x==10){
+            var y = 20;     // initialization
+            var y = 30      // shadowing
+            document.write("X=" + x + "<br>" + "Y=" + y + "<br>" + "Z=" + z);
+        }
+        
+    }
+    f1();
+</script>

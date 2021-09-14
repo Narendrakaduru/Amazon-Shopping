@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Login</title>
+    <script>
+        function loginClick(){
+            var userName = document.getElementById("txtName").value;
+            var password = document.getElementById("txtPwd").value;
+            var msg = document.getElementById("msg");
+            if(userName == "jhon" && password == "admin"){
+                msg.innerHTML = "Login Sucessful...".fontcolor('green');
+                //msg.style.color = "green";
+                //msg.className = "text-success";
+            }
+            else{
+                msg.innerHTML = "Login Failed... Invalid Credentials".fontcolor('red');
+                //msg.style.color = "red";
+                //msg.className = "text-danger"; //from bootstrap
+            }
+        }
+    </script>
+</head>
+<body class="container mt-5">
+    <fieldset>
+        <legend>User Login</legend>
+        <dl class="w-50">
+            <dt>User name</dt>
+            <dd><input class="form-control" type="text" id="txtName"></dd>
+            <dt>Password</dt>
+            <dd><input class="form-control" type="password" id="txtPwd"></dd>
+        </dl>
+        <button onclick="loginClick()" class="btn btn-warning">Login</button>
+    </fieldset>
+    <p class="text-center mt-3" id="msg"></p>
+</body>
+</html>

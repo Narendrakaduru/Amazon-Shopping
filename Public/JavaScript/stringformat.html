@@ -14,6 +14,7 @@
             var username = document.getElementById("txtName").value;
             document.getElementById("txtName").value = username.toUpperCase();
             var msg = document.getElementById("msg");
+            
             if(username.length < 4){
                 msg.innerHTML = "Name too short... min 4 Chars required"
             }

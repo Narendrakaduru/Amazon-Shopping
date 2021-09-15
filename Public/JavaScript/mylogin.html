@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Login</title>
+    <script>
+        var username = document.getElementById("txtName").value;
+        var password = document.getElementById("txtPwd").value;
+        function ChangeCase(){
+            username = document.getElementById("txtName").value;
+            document.getElementById("txtName").value = username.toLowerCase();
+            var msgname = document.getElementById("msgName");
+            
+            if(username.length < 4){
+                msgname.innerHTML = "Name too short... min 4 Chars required";
+                msgname.className = "bg-danger text-white p-2 rounded";
+            }
+            else if(username.length > 10){
+                msgname.innerHTML = "Name too long... max 10 chars"
+                msgname.className = "bg-danger text-white p-2 rounded";
+            }
+            else{
+                msgname.innerHTML = "";
+                msgname.className = "d-none";
+            }
+        }
+
+        function passver(){
+            password = document.getElementById("txtPwd").value;
+            document.getElementById("txtPwd").value = password.toLowerCase();
+            var msgpwd = document.getElementById("msgPwd");
+            
+            if(password.length < 4){
+                msgpwd.innerHTML = "Password too short...";
+                msgpwd.className = "bg-danger text-white p-2 rounded";
+            }
+            else if(password.length > 10){
+                msgpwd.innerHTML = "Password too long..."
+                msgpwd.className = "bg-danger text-white p-2 rounded";
+            }
+            else{
+                msgpwd.innerHTML = "";
+                msgpwd.className = "d-none";
+            }
+        }
+        function loginClick(){
+            username = document.getElementById("txtName").value;
+            password = document.getElementById("txtPwd").value;
+            var warningMsg = document.getElementById("warningMsg");
+            if(username == "jhon" && password == "admin"){
+                warningMsg.innerHTML = "Login Sucessful";
+                warningMsg.className = "bg-success text-white p-2 rounded";
+            }else{
+                warningMsg.innerHTML = "Invalid Login";
+                warningMsg.className = "bg-danger text-white p-2 rounded text-center";
+            }
+        }
+    </script>
+</head>
+<body class="container mt-5">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="w-50">
+            <fieldset>
+                <legend>Register</legend>
+        
+                <div class="form-group mb-3">
+                    <label for="username" class="form-label">User Name:</label>
+                    <div>
+                        <input onkeyup="ChangeCase()" type="text" id="txtName" class="form-control mb-3"  placeholder="userName">
+                        <span id="msgName"></span>
+                    </div>
+                </div>
+        
+                <div class="form-group mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <div>
+                        <input onkeyup="passver()" type="password" id="txtPwd" class="form-control mb-3"  placeholder="Password">
+                        <span id="msgPwd"></span>
+                    </div>
+                </div>
+        
+                <div class="mb-3">
+                    <button onclick="loginClick()" class="btn btn-warning">Login</button>
+                </div>
+            </fieldset>
+        </div>
+        
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="w-25 text-center">
+            <p id="warningMsg"></p>
+        </div>
+    </div>
+</body>
+</html>

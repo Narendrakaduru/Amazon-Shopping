@@ -10,6 +10,9 @@
 			font-family: amazonFont;
 			src: url(../Public/fonts/AmazonEmber_Rg.ttf);
         }
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
         body{
             font-family: amazonFont, Helvetica, sans-serif;
             margin: 0px;
@@ -21,9 +24,6 @@
             align-items: center;
             margin: 0px;
             margin-top: 30px;
-        }
-        .form-container{
-            width: 512px;
         }
         .form-header{
             background-color: #363B3F;
@@ -47,7 +47,7 @@
         }
         .form-control, .form-control:active, .form-control:focus {
             margin-top: 5px;
-            width: 92%;
+            width: 100%;
             color: #5a5a5a;
             background-color: #e7e7e7;
             font-size: 15px;
@@ -63,6 +63,7 @@
         .split{
             display: grid;
             grid-template-columns: 6fr 6fr;
+            grid-gap: 20px;
         }
         .split .form-control{
             width: auto;

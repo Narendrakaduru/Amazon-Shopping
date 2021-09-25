@@ -1,0 +1,26 @@
+<script>
+    function f1(){
+        var collection = [30000, 46000, 14000, 63000, 11000];
+        var result = collection.find(function(value){
+            return value > 40000;
+        })
+        document.write(result + "<br>");
+    }
+    function f2(){
+        var collection = [30000, 46000, 14000, 63000, 11000];
+        var result = collection.filter(function(value){
+            return value > 40000;
+        })
+        document.write(result + "<br>");
+    }
+    function f3(){
+        var collection = [30000, 46000, 14000, 63000, 11000];
+        var result = collection.filter(function(value){
+            return value > 10000 && value < 50000;
+        })
+        document.write(result + "<br>");
+    }
+    f1();
+    f2();
+    f3();
+</script>

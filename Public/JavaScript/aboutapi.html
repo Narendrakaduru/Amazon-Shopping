@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>About API</title>
+    <style type="text/css">
+        .card{
+            margin: 15px;
+            padding: 15px 15px 0px 15px;
+            border: unset;
+            background-color: #f8f8f8;
+            width: 245px;
+        }
+        .card-img-top{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+        .card-title{
+            color: #ff650b;
+        }
+        .card-text{
+            color: #757575;
+        }
+        .about-text{
+            color: #979797;
+        }
+        .card-body p{
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function GetAbout(){
+            fetch("https://reqres.in/api/users?page=2")
+            .then(function(request){
+                return request.json();
+            })
+            .then(function(data){
+                for(var item of data.data){
+
+                    var card = document.createElement("div");
+                    card.className = "card";
+                    card.innerHTML = 
+                            `<img src=${item.avatar} height="180" width="180" class="card-img-top center">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.first_name} ${item.last_name}</h5>
+                                <p class="card-text">${item.email}</p>
+                                <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, cupiditate.</p>
+                            </div>
+                            `;
+                    document.getElementById("about-container").appendChild(card);
+                }
+            })
+        }
+        function bodyload(){
+            GetAbout();
+        }
+    </script>
+</head>
+<body class="container" onload="bodyload()">
+    <div class="row mt-4">
+        <div id="about-container" class="col d-flex flex-wrap justify-content-start align-items-start">
+            
+        </div>
+    </div>
+</body>
+</html>

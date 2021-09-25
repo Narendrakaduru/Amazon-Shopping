@@ -1,0 +1,41 @@
+<script>
+    function f1(){
+        var collection = new Array(2);
+        collection[0] = 10;
+        collection[1] = 20;
+        collection[2] = 30;
+        collection[3] = 40;
+        collection["4"] = 50;  // 4 is property value not index number.
+        // proprty will map to index
+
+        for(var property in collection){
+            document.write(`${property} : [${typeof property}] : ${collection[property]} <br>`);
+        }
+    }
+    function f2(){
+        var collection = ["Electronics", "Footwear", "Fashion"];
+        document.write(collection[2] + "<br>");
+
+
+        document.write(collection.toString() + "<br>");
+        document.write(collection.join("-->") + "<br>");
+
+
+        collection.map(function(value){
+            document.write(`<li>${value}</li>`);
+        })
+        
+        document.write("<br>");
+    }
+    function f3(){
+        var collection = [1, "Samsung TV", true, ["Delhi", "Hyd"], function(){document.write("Arrays in javascript <br>")}];
+        var [id, name, stock, cities, print] = collection;
+        /* collection[4]();
+        document.write(collection[3][0]); */
+        print();
+        document.write(cities[1] + "<br>" + "id = " +id);
+    }
+    f1();
+    f2();
+    f3();
+</script>

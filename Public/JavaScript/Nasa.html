@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script>
+        function bodyload(){
+            fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                for(var item of data.photos){
+                    var tr = document.createElement("tr");
+                    var tdId = document.createElement("td");
+                    var tdPhoto = document.createElement("td");
+                    var tdcamera = document.createElement("td");
+                    var tdRover = document.createElement("td");
+                    var tdLaunchdt = document.createElement("td");
+                    var tdLandingdt = document.createElement("td");
+
+                    tdId.innerHTML = item.id;
+                    
+                    var pic = document.createElement("img");
+                    pic.src = item.img_src;
+                    pic.width = "200";
+                    pic.height = "100";
+
+                    tdPhoto.appendChild(pic);
+
+                    tdcamera.innerHTML = item.camera.full_name;
+                    tdRover.innerHTML = item.rover.name;
+                    tdLaunchdt.innerHTML = item.rover.launch_date;
+                    tdLandingdt.innerHTML = item.rover.landing_date;
+
+                    tr.appendChild(tdId);
+                    tr.appendChild(tdPhoto);
+                    tr.appendChild(tdcamera);
+                    tr.appendChild(tdRover);
+                    tr.appendChild(tdLaunchdt);
+                    tr.appendChild(tdLandingdt);
+                    document.getElementById("tbody").appendChild(tr);
+                }
+            })
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <h3>Nasa Mars Table</h3>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Photo ID</th>
+                <th>Photo</th>
+                <th>Camera Name</th>
+                <th>Rover Name</th>
+                <th>Launch Date</th>
+                <th>landing Date</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -12,7 +12,7 @@
             document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
             document.getElementById("lblPrice").innerHTML = document.getElementById("txtPrice").value;
             document.getElementById("lblCity").innerHTML = document.getElementById("lstCities").value;
-
+            
             stockStatus = "";
             stockCheckbox = document.getElementById("optStock");
             if(stockCheckbox.checked) {
@@ -21,6 +21,20 @@
                 stockStatus = "Out of Stock";
             }
             document.getElementById("lblStock").innerHTML = stockStatus;
+
+        }
+        function StockChange(){
+            var stockCheckbox = document.getElementById("optStock");
+            var lblstock = document.getElementById("lblstock");
+            var reg = document.getElementById("reg");
+
+            if(stockCheckbox.checked == true){
+                lblstock.innerHTML = "Available";
+                reg.disabled = false;
+            }else{
+                lblstock.innerHTML = "Out of Stock"
+                reg.disabled = true;
+            }
         }
     </script>
 </head>
@@ -49,12 +63,12 @@
                             </dd>
                             <dt>Stock</dt>
                             <dd class="form-switch form-check">
-                                <input type="checkbox" id="optStock" class="form-check-input"> Available
+                                <input onchange="StockChange()" type="checkbox" id="optStock" class="form-check-input"> <label id="lblstock">Out of stock</label>
                             </dd>
                         </dl>
                     </div>
                     <div class="modal-footer">
-                        <button onclick="registerClick()" class="btn btn-primary" data-bs-dismiss="modal">Register</button>
+                        <button onclick="registerClick()" id="reg" class="btn btn-primary" data-bs-dismiss="modal" disabled>Register</button>
                         <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>

@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Document</title>
+    <script>
+        function VerifyCard(){
+            var cardnumber = document.getElementById("txtCard").value;
+            var pic = document.getElementById("pic");
+
+            if(cardnumber.startsWith("4444")){
+                pic.src = "../images/mastercard.png";
+            }else if(cardnumber.startsWith("5555")){
+                pic.src = "../images/visa.png";
+            }else{
+                pic.src = "";
+                pic.alt = "invalid";
+
+            }
+        }
+        function VerifyEmail(){
+            var email = document.getElementById("txtEmail").value;
+            var lblemail = document.getElementById("lblEmail");
+
+            if(email.indexOf("@") == -1){
+                lblEmail.innerHTML = "Invalid Email: Please incluide '@'."
+            }else{
+                if(email.endsWith("gmail.com")) {
+                lblEmail.innerHTML = "";
+                }else {
+                    lblEmail.innerHTML = "Invalid: Not a valid Gmail ID"
+                }
+            }
+        }
+        function VerifyName(){
+            var username = document.getElementById("txtName").value;
+            var lblName = document.getElementById("lblName");
+            if(username.charCodeAt(0) >= 65 && username.charCodeAt(0) <= 90){
+                lblName.innerHTML = "";
+            }else{
+                lblName.innerHTML = "Invalid: UserName must start with Uppercase"
+            }
+        }
+        function VerifyPassword(){
+            var password = document.getElementById("txtPwd").value;
+            var lblPwd = document.getElementById("lblPwd");
+
+            var regExp = /(?=.*[A-Z]\w{4,10}\W+)/;
+            if(password.match(regExp)){
+                lblPwd.innerHTML = "";
+            }else{
+                lblPwd.innerHTML = "Invalid: password 4 to 10 characters"
+            }
+        }
+    </script>
+</head>
+<body class="container">
+    <fieldset>
+        <legend>your password</legend>
+        <div>
+            <input onkeyup="VerifyPassword()" type="password" id="txtPwd" class="form-control">
+            <div id="lblPwd" class="text-danger"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Your Credit Card Number</legend>
+        <div class="input-group">
+            <input onkeyup="VerifyCard()" type="text" id="txtCard" class="form-control">
+            <span class="input-group-text"><img id="pic" width="50" height="30"></span>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Your Gmail address</legend>
+        <div>
+            <input onkeyup="VerifyEmail()" type="text" id="txtEmail" class="form-control mb-2">
+            <div id="lblEmail" class="text-danger"></div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>User Name</legend>
+        <div>
+            <input onkeyup="VerifyName()" placeholder="Name must start with Uppercase" type="text" id="txtName" class="form-control mb-2">
+            <div id="lblName" class="text-danger"></div>
+        </div>
+    </fieldset>
+</body>
+</html>

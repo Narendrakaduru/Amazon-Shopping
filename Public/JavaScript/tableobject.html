@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Table Object</title>
+    <script>
+        var products = [
+            {Name: "JBL Speaker", Price: 4500.55, Photo: "../images/JBL.jpg"},
+            {Name: "Nike Casuals", Price: 9000.99, Photo: "../images/Nike.jpg"},
+            {Name:"Shirt", Price:6000.66, Photo: "../images/shirt.jpg"}
+
+        ]
+        function bodyload(){
+
+            var tbody = document.getElementById("tbody");
+            for(var product of products){
+                var tr = document.createElement("tr");
+                var tdName = document.createElement("td");
+                var tdPrice = document.createElement("td");
+                var tdPhoto = document.createElement("td");
+
+                tdName.innerHTML = product.Name;
+                tdPrice.innerHTML = product.Price;
+
+                var pic = document.createElement("img");
+                pic.src = product.Photo;
+                pic.height = "100";
+                pic.width = "100";
+
+                tdPhoto.appendChild(pic);
+
+                tr.appendChild(tdName);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdPhoto);
+
+                tbody.appendChild(tr);
+
+            }
+        }
+    </script>
+</head>
+<body class="container" onload="bodyload()">
+    <h3>Products Table</h3>
+    <table class="table table-hover w-50">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+           
+        </tbody>
+    </table>
+</body>
+</html>

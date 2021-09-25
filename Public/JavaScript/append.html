@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Prepend</title>
+    <script>
+        function bodyload(){
+            document.querySelector("P").append("Appended Text");
+            document.querySelector("P").prepend("prepended Text");
+            // append and prepend allows only text cannot add elements.
+
+            var div = document.createElement("div");
+            div.innerHTML = "This is div Text";
+            
+
+            var pic = document.createElement("img");
+            pic.src = "../images/Nike.jpg";
+            pic.width = "100";
+            pic.height = "100";
+            document.querySelector("p").appendChild(div);
+            document.querySelector("p").appendChild(pic);
+
+        }
+
+    </script>
+</head>
+<body onload="bodyload()">
+    <p> Some text </p>
+</body>
+</html>

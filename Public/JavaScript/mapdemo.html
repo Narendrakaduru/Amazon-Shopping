@@ -1,0 +1,14 @@
+<script>
+    function f1(){
+        var data = new Map();
+        data.set(101, "Samsung TV")
+            .set(102, "Nike Casuals")
+            .set(103, "Shirts");
+        
+        for(var key of data.entries()){
+            document.write(key + "<br>");
+        }
+        document.write(data.get(103));
+    }
+    f1();
+</script>

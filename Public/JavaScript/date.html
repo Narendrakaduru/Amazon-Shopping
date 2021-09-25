@@ -1,0 +1,27 @@
+<script>
+    function f1(){
+        var Name = "Samsung TV";
+        var Mfd = new Date("2021-01-20");
+
+        var weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+        var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+        // document.write(`Name = ${Name} <br> Manufactured = ${Mfd}`);
+
+        document.write(`${weekdays[Mfd.getDay()]} ,${Mfd.getDate()}-${months[Mfd.getMonth()]}-${Mfd.getFullYear()}<br>`)
+    }
+    function f2(){
+        var now = new Date();
+        var hrs = now.getHours();
+        if(hrs>=00 && hrs<=12) {
+            document.write("Good Morning" + "<br>");
+        } else if(hrs>12 && hrs<=17) {
+            document.write("Good Afternoon" + "<br>");
+        } else if(hrs>17 && hrs<=19) {
+            document.write("Good Evening" + "<br>");
+        }else if(hrs>19){
+            document.write("Good Night" + "<br>");
+        }
+    }
+    f1();
+    f2();
+</script>

@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var categories = ["All", "Electronics", "Footwear", "Fashion"];
+
+        function Loadcategories(){
+            // clear the previous list
+            document.getElementById("olCategories").innerHTML = "";
+            document.getElementById("selectCategories").innerHTML = "";
+            document.getElementById("tbody").innerHTML = "";
+
+            for(var category of categories){
+                var listItem = document.createElement("li");
+                listItem.innerHTML = category;
+                document.getElementById("olCategories").appendChild(listItem);
+
+                var opt = document.createElement("option");
+                opt.innerHTML = category;
+                document.getElementById("selectCategories").appendChild(opt);
+
+                var tr = document.createElement("tr");
+                var td = document.createElement("td");
+                td.innerHTML = category;
+                tr.appendChild(td);
+                document.getElementById("tbody").appendChild(tr);
+
+            }
+        }
+        function bodyload(){
+            Loadcategories();   
+        }
+        function AddClick(){
+            var txtName = document.getElementById("txtName");
+            categories.push(txtName.value);
+            bodyload();
+            txtName.value = "";
+            
+        }
+        function RemoveClick(){
+            categories.pop();
+            Loadcategories();
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <div class="mt-4">
+        <div class="input-group">
+            <input type="text" id="txtName" class="form-control" placeholder="Category Name">
+            <button onclick="AddClick()" class="btn btn-primary">Add category</button>
+        </div>
+    </div>
+    <div class="mt-3 row">
+        <div class="col">
+            <ol id="olCategories">
+                
+            </ol>
+        </div>
+        <div class="col">
+            <select class="form-select" id="selectCategories">
+
+            </select>
+        </div>
+        <div class="col">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <tr>
+                        <th>Select categories</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button onclick="RemoveClick()" class="btn btn-danger">Remove category</button>
+    </div>
+</body>
+</html>

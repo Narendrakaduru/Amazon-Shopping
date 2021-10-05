@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Module</title>
+        <script type="module">
+            import Product from "../Library/prod.js";
+            let obj = new Product();
+            obj.Name = "Samsung TV",
+            obj.Price = 56000.44,
+            obj.Qty = 2,
+            document.querySelector("p").innerHTML = obj.Print();
+        </script>
+    </head>
+    <body>
+        <p></p>
+    </body>
+</html>

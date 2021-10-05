@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi level</title>
+    <script>
+        var userdetails = {
+            CardNumber : "444555666",
+            Cvv : "4060",
+            Expiry : "2022"
+        };
+        function payClick(){
+            var card = document.getElementById("txtCard").value;
+            var cvv = document.getElementById("txtCvv").value;
+            var year = document.getElementById("lstYear").value;
+            var msg = document.getElementById("msg");
+
+            if(card == userdetails.CardNumber){
+                if(cvv == userdetails.Cvv){
+                    if(year == userdetails.Expiry){
+                        document.write(`<h2>payment Success`);
+                    }else{
+                        msg.innerHTML = "Invalid Expiry Year";
+                    }
+                }else{
+                    msg.innerHTML = "Invalid Cvv";
+                }
+            }else{
+                msg.innerHTML = "Invalid Card Number";
+            }
+        }
+        function VerifyCard(val){
+            if(val == userdetails.CardNumber){
+                document.getElementById("txtCvv").disabled = false;
+            }
+        }
+        function verifyCvv(val){
+            if(val == userdetails.Cvv){
+                document.getElementById("lstYear").disabled = false;
+            }
+        }
+        function verifyYear(val){
+            if(val == userdetails.Expiry){
+                document.getElementById("btnPay").disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input onkeyup="VerifyCard(this.value)" type="text" id="txtCard"></dd>
+            <dt>CVV</dt>
+            <dd><input onkeyup="verifyCvv(this.value)" disabled type="text" id="txtCvv" size="4"></dd>
+            <dt>Expiry</dt>
+            <dd>
+                <select onchange="verifyYear(this.value)" disabled id="lstYear">
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                </select>
+            </dd>
+        </dl>
+        <button disabled onclick="payClick()" id="btnPay">Pay</button>
+    </fieldset>
+    <h1 id="msg" align="center"></h1>
+</body>
+</html>

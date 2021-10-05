@@ -1,0 +1,22 @@
+<script>
+    document.write(navigator.appName + "<br>");
+    document.write(navigator.appVersion + "<br>");
+    document.write(navigator.appCodeName + "<br>");
+    document.write(navigator.cookieEnabled + "<br>");
+    document.write((navigator.cookieEnabled == true)?"Cookie Enabled <br>":"Please Enable Cookies on your Browser" + "<br>");
+    document.write("------Plugins Installed---------" + "<br>");
+    for(var item of navigator.plugins){
+        document.write(item.name + "<br>");
+    }
+    if(navigator.plugins['PDF Viewer'] == undefined){
+        document.write("Please Install PDF Viewer" + "<br>");
+    }else{
+        document.write("You can Watch PDF Documents" + "<br>");
+    }
+    function f1(){
+        navigator.geolocation.getCurrentPosition(function(position){
+            document.write(`Latitude : ${position.coords.latitude} <br> Longitude : ${position.coords.longitude}`);
+        })
+    }
+    f1();
+</script>

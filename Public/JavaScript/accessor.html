@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accessors</title>
+        <script type="module">
+            import Product from "../Library/accessors.js";
+            var obj = new Product();
+            obj.UserName = prompt("Enter User name");
+            obj.Password = prompt("Enter Password");
+            obj.ProductName = prompt("Enter Product Name");
+            if(obj.ProductName){
+                document.querySelector("p").innerHTML = "Name = " + obj.ProductName;
+            }else{
+                document.querySelector("p").innerHTML = obj.StatusMsg;
+            }
+        </script>
+    </head>
+    <body>
+        <p></p>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Results</title>
+        <script>
+            function bodyload(){
+                var str = location.search;
+                document.querySelector("p").innerHTML = "Search Term : " + str.substring(str.indexOf("=") + 1);
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <p></p>
+    </body>
+</html>

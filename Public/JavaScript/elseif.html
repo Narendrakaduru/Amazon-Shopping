@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else If validation</title>
+    <script>
+        var userdetails = {
+            UserId : 'Jhon',
+            Mobile : '9876543210'
+        }
+        function LoginClick(){
+            var txtId = document.getElementById("txtId").value;
+            var msg = document.getElementById("msg");
+            if(txtId == userdetails.UserId){
+                msg.innerHTML = `Hello! ${userdetails.UserId} Login Sucess with userId : ${userdetails.UserId}`;
+            } else if(txtId == userdetails.Mobile){
+                msg.innerHTML = `Hello! ${userdetails.UserId} Login Sucess with mobile : ${userdetails.Mobile}`;
+            }else{
+                msg.innerHTML = `Please enter valid username or mobile`;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>User Login</legend>
+        <input type="text" id="txtId" placeholder="User ID / Mobile">
+        <button onclick="LoginClick()">Login</button>
+    </fieldset>
+    <div id="msg"></div>
+</body>
+</html>

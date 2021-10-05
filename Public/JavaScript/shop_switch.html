@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Switch Demo</title>
+    <script>
+        var categories = ["Select Categories", "Electronics", "Footwear", "Fashion"];
+        var electronics = ["Select Electronics", "JBL Speaker", "Earpods"];
+        var footwear = ["Select Footwear", "Nike Casuals", "Lee Boot"];
+        var fashion = ["Select Fashion", "Shirt", "Jeans"];
+
+        var data = [
+            {Name: "JBL Speaker", Price: 4000.45, Photo: "../images/JBL.jpg"},
+            {Name: "Earpods", Price: 2000.05, Photo: "../images/earpods.jpg"},
+            {Name: "Nike Casuals", Price: 9500.45, Photo: "../images/Nike.jpg"},
+            {Name: "Lee Boot", Price: 8000.45, Photo: "../images/lee.jpg"},
+            {Name: "Shirt", Price: 1500.55, Photo: "../images/shirt.jpg"},
+            {Name: "Jeans", Price: 2000.22, Photo: "../images/jeans.jpg"},
+        ];
+
+        var products = [];
+
+        function LoadProducts(){
+            var lstProducts = document.getElementById("lstProducts");
+            lstProducts.innerHTML = "";
+            for(var item of products){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                lstProducts.appendChild(opt);
+            }
+        }
+        function LoadCategories(){
+            for(var item of categories){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                document.getElementById("lstCategories").appendChild(opt);
+            }
+        }
+        function categoryChange(){
+            var selectedCategory = document.getElementById("lstCategories").value;
+            
+            switch(selectedCategory){
+
+                case "Electronics":
+                products = electronics;
+                LoadProducts();
+                break;
+
+                case "Footwear":
+                products = footwear;
+                LoadProducts();
+                break;
+
+                case "Fashion":
+                products = fashion;
+                LoadProducts();
+                break;
+
+                default:
+                products = ["Select Category"];
+                LoadProducts();
+                break; 
+            }
+            
+        }
+        var searchedProduct;
+        function productChange(){
+            var selectedProduct = document.getElementById("lstProducts").value;
+            searchedProduct = data.find(function(product){
+                return product.Name == selectedProduct;
+            });
+            document.getElementById("pic").src = searchedProduct.Photo;
+            document.getElementById("lblName").innerHTML = searchedProduct.Name;
+            document.getElementById("lblPrice").innerHTML = searchedProduct.Price;
+        }
+        function LoadAllProducts(){
+            for(var item of data){
+                var card = document.createElement("div");
+                card.className = "card m-2 w-25";
+                card.innerHTML = `
+                <img src="${item.Photo}" height="200">
+                <div class="card-header">
+                    <h4>${item.Name}</h4>
+                    <p> &#8377; ${item.Price}</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-danger w-100">
+                        <span class="bi bi-cart4"> Add to Cart</span>
+                    </button>
+                </div>
+                `;
+                document.getElementById("productsHome").appendChild(card);
+            }
+        }
+        var CartItems = [];
+        function getItemsCount(){
+            document.getElementById("lblCount").innerHTML = CartItems.length;
+        }
+        function AddToCartClick(){
+            CartItems.push(searchedProduct);
+            getItemsCount();
+            alert(`${searchedProduct.Name} Added to Cart`);
+
+        }
+        function showCartItems(){
+            document.getElementById("tbody").innerHTML = "";
+            for(var item of CartItems){
+                var tr = document.createElement("tr");
+                var tdName = document.createElement("td");
+                var tdPrice = document.createElement("td");
+                var tdPhoto = document.createElement("td");
+                var tdDelete = document.createElement("td");
+
+                tdName.innerHTML = item.Name;
+                tdPrice.innerHTML = item.Price;
+                tdDelete.innerHTML = `<span id="deleteCartItem()" class="bi bi-trash bg-danger p-2 rounded text-white"></span>`;
+
+                var img = document.createElement("img");
+                img.src = item.Photo;
+                img.width = "50";
+                img.height = "50";
+
+                tdPhoto.appendChild(img);
+
+                tr.appendChild(tdName);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdPhoto);
+                tr.appendChild(tdDelete);
+
+                document.getElementById("tbody").appendChild(tr);
+
+            }
+        }
+        function bodyload(){
+            LoadCategories();
+            LoadAllProducts();
+        }
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <header class="bg-danger text-center text-white p-4 d-flex justify-content-between">
+        <div>
+            Amazon Shopping
+        </div>
+        <div>
+            <button onclick="showCartItems()" data-bs-target="#cart" data-bs-toggle="modal" type="button" class="btn btn-warning position-relative">
+                <span class="bi bi-cart3"></span>
+                Cart
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-dark">
+                  <span id="lblCount"></span>
+                </span>
+              </button>
+
+
+              <div class="modal fade" id="cart">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="text-warning">Your cart Items</h3>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Preview</th>
+                                        <th>Remove Item</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+        </div>
+    </header>
+    <section class="row">
+        <div class="col-3">
+            <div class="mt-2">
+                <label>Select Category</label>
+                <div>
+                    <select onchange="categoryChange()" class="form-select" id="lstCategories"></select>
+                </div>
+            </div>
+            <div class="mt-2">
+                <label>Select Products</label>
+                <div>
+                    <select onchange="productChange()" class="form-select" id="lstProducts"></select>
+                </div>
+            </div>
+            <div class="mt-2">
+                <label>Product Preview</label>
+                <div class="card">
+                    <img id="pic" height="200" class="card-img-top">
+                    <div class="card-header">
+                        <h4 id="lblName"></h4>
+                        <p id="lblPrice"></p>
+                    </div>
+                    <div class="card-footer">
+                        <button onclick="AddToCartClick()" class="btn btn-danger w-100">
+                            <span class="bi bi-cart3"></span>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div id="productsHome" class="d-flex flex-wrap">
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <script>
+            function InsertClick(e, obj){
+                alert(e.clientX + "\n" + obj.id);
+            }
+        </script>
+    </head>
+    <body>
+        <button name="Insert" id="btnInsert" onclick="InsertClick(event, this)">Insert</button>
+        <!-- event sends information about Events
+        this sends information about Objects -->
+    </body>
+</html>

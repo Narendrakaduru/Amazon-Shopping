@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css" integrity="sha512-F7WyTLiiiPqvu2pGumDR15med0MDkUIo5VTVyyfECR5DZmCnDhti9q5VID02ItWjq6fvDfMaBaDl2J3WdL1uxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>INOX Movies</title>
+    <style>
+        .modal-body dl dt, .modal-body dl dd{
+            font-size: 15px;
+            min-height: 32px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        // select movie
+        var selectMovie = ["No Time to Die (U/A)", "Love Story (U/A)", "Shang-Chi and the Legend of... (U/A)"];
+
+        // select cinema
+        var selectCinema1 = ["Select Cinema", "INOX GVK One,Banjara Hills"];
+        var selectCinema2 = ["Select Cinema", "INOX GVK One,Banjara Hills", "INOX Maheshwari Parmeshwari Mall,Kachiguda"];
+        var selectCinema3 = ["Select Cinema", "INOX GVK One,Banjara Hills", "INOX Maheshwari Parmeshwari Mall,Kachiguda", "INOX GSM Mall,Madeenaguda"];
+
+        // select Date
+        var selectDate1 = ["Select Date", "TODAY 1st October", "TOMORROW 2nd October", "SUNDAY 3rd October"];
+        var selectDate2 = ["Select Date", "TOMORROW 2nd October", "SUNDAY 3rd October"];
+        var selectDate3 = ["Select Date", "TODAY 1nd October", "TOMORROW 2nd October"];
+
+        // select Time
+        var selectTiming1 = ["Select Timing", "10:00 AM Telugu", "1:30 PM Telugu"];
+        var selectTiming2 = ["Select Timing", "10:00 AM Telugu", "1:30 PM Telugu"];
+        var selectTiming3 = ["Select Timing", "10:00 AM Telugu", "1:30 PM Telugu", "4:30 PM Telugu"];
+
+        var selectSeats1 = ["Select Seats", "1", "2", "3", "4"];
+        var selectSeats2 = ["Select Seats", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+        var selectSeats3 = ["Select Seats", "1", "2", "3", "4", "5", "6", "7", "8"];
+
+
+        
+        // Loading Movies in first select
+        function LoadMovie(){
+            for(var item of selectMovie){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                document.getElementById("selectMovie").appendChild(opt);
+            }
+        }
+
+        // loading cinemas in second select
+        var cinemas = [];
+        function LoadCinema(){
+            var selectCinema = document.getElementById("selectCinema");
+            selectCinema.innerHTML = "";
+            for(var item of cinemas){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                selectCinema.appendChild(opt);
+            }
+        }
+
+        function movieChanged(){
+            var selectedMovie = document.getElementById("selectMovie").value;
+
+            switch (selectedMovie) {
+                case "No Time to Die (U/A)":
+                    cinemas = selectCinema1;
+                    LoadCinema();
+                    break;
+
+                case "Love Story (U/A)":
+                    cinemas = selectCinema2;
+                    LoadCinema();
+                    break;
+
+                case "Shang-Chi and the Legend of... (U/A)":
+                    cinemas = selectCinema3;
+                    LoadCinema();
+                    break;
+            
+                default:
+                    cinemas = ["Select Movie"];
+                    LoadCinema();
+                    break;
+            }
+        }
+
+        // loading date in 3rd select
+        var date = [];
+        function LoadDate(){
+            var selectDate = document.getElementById("selectDate");
+            selectDate.innerHTML = "";
+            for(var item of date){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                selectDate.appendChild(opt);
+            }
+        }
+
+        function cinemaChanged(){
+            var selectedCinema = document.getElementById("selectCinema").value;
+
+            switch (selectedCinema) {
+
+                case "INOX GVK One,Banjara Hills":
+                    date = selectDate1;
+                    LoadDate();
+                    break;
+
+                case "INOX Maheshwari Parmeshwari Mall,Kachiguda":
+                    date = selectDate2;
+                    LoadDate();
+                    break;
+
+                case "INOX GSM Mall,Madeenaguda":
+                    date = selectDate3;
+                    LoadDate();
+                    break;
+            
+                default:
+                    date = ["Select Cinema"];
+                    LoadDate();
+                    break;
+            }
+        }
+
+        // loading timing in 4th select
+        var time = [];
+        function LoadTime(){
+            var selectTime = document.getElementById("selectTiming");
+            selectTiming.innerHTML = "";
+            for(var item of time){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                selectTiming.appendChild(opt);
+            }
+        }
+
+        function dateChanged(){
+            var selectedDate = document.getElementById("selectDate").value;
+
+            switch (selectedDate) {
+                case "TODAY 1st October":
+                    time = selectTiming1;
+                    LoadTime();
+                    break;
+                
+                case "TOMORROW 2nd October":
+                    time = selectTiming2;
+                    LoadTime();
+                    break;
+
+                case "SUNDAY 3rd October":
+                    time = selectTiming3;
+                    LoadTime();
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+
+        // loading seats 5th select
+
+        var seats = [];
+        function LoadSeats(){
+            var selectSeat = document.getElementById("selectSeats");
+            selectSeat.innerHTML = "";
+            for(var item of seats){
+                var opt = document.createElement("option");
+                opt.innerHTML = item;
+                selectSeat.appendChild(opt);
+            }
+        }
+
+        function timingChanged(){
+            var selectedTime = document.getElementById("selectTiming").value;
+
+            switch (selectedTime) {
+                case "10:00 AM Telugu":
+                    seats = selectSeats1;
+                    LoadSeats();
+                    break;
+
+                case "1:30 PM Telugu":
+                    seats = selectSeats2;
+                    LoadSeats();
+                    break;
+
+                case "4:30 PM Telugu":
+                    seats = selectSeats3;
+                    LoadSeats();
+                    break;
+            
+                default:
+                    seats = ["Select Timings"];
+                    LoadSeats();
+                    break;
+            }
+        }
+
+        function BookTicket(){
+            document.getElementById("lblMovie").innerHTML = document.getElementById("selectMovie").value;
+            document.getElementById("lblCinema").innerHTML = document.getElementById("selectCinema").value;
+            document.getElementById("lblDate").innerHTML = document.getElementById("selectDate").value;
+            document.getElementById("lblTimings").innerHTML = document.getElementById("selectTiming").value;
+            document.getElementById("lblSeats").innerHTML = document.getElementById("selectSeats").value;
+
+            var seats = document.getElementById("selectSeats").value;
+            var ticketPrice = 200 * seats;
+
+            var conveniencecharge = seats * 25;
+            document.getElementById("conveniencecharge").innerHTML = conveniencecharge;
+
+            var cgst = seats * 2.25;
+            var sgst = seats * 2.25;
+
+            document.getElementById("lblcgst").innerHTML = cgst;
+            document.getElementById("lblsgst").innerHTML = sgst;
+
+            var Gtotal = ticketPrice + conveniencecharge + cgst +sgst;
+            document.getElementById("Gtotal").innerHTML = Gtotal;
+        }
+        function bodyload(){
+            LoadMovie();
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div class="container">
+        <div class="booking-container d-flex justify-content-center">
+            <div class="section-book m-2">
+                <select onchange="movieChanged()" id="selectMovie" class="form-select" style="width: 150px; text-overflow: ellipsis;">
+                    <option>Select Movie</option>
+                </select>
+            </div>
+            <div class="section-book m-2">
+                <select onchange="cinemaChanged()" id="selectCinema" class="form-select" style="width: 160px; text-overflow: ellipsis;">
+                    <option>Select Cinema</option>
+                </select>
+            </div>
+            <div class="section-book m-2">
+                <select onchange="dateChanged()" id="selectDate" class="form-select" style="width: 150px; text-overflow: ellipsis;">
+                    <option>Select Date</option>
+                </select>
+            </div>
+            <div class="section-book m-2">
+                <select onchange="timingChanged()" id="selectTiming" class="form-select" style="width: 170px;">
+                    <option>Select Timing</option>
+                </select>
+            </div>
+            <div class="section-book m-2">
+                <select id="selectSeats" class="form-select" style="width: 150px;">
+                    <option>Select Seats</option>
+                </select>
+            </div>
+
+            <div class="m-2">
+                <button onclick="BookTicket()" class="btn btn-danger" id="bookTicket" data-bs-target="#bookingsummary" data-bs-toggle="modal">BOOK</button>
+                <div class="modal fade" id="bookingsummary">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Ticket Booking Summary</h4>
+                                <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <dl class="row">
+                                    <dt class="col-5">Selected Movie <span class="float-end">:</span></dt>
+                                    <dd class="col-7" id="lblMovie"></dd>
+
+                                    <dt class="col-5">Selected Cinema <span class="float-end">:</span></dt>
+                                    <dd class="col-7" id="lblCinema"></dd>
+
+                                    <dt class="col-5">Selected Date <span class="float-end">:</span></dt>
+                                    <dd class="col-7" id="lblDate"></dd>
+
+                                    <dt class="col-5">Selected Timings <span class="float-end">:</span></dt>
+                                    <dd class="col-7" id="lblTimings"></dd>
+
+                                    <dt class="col-5">Selected Seats <span class="float-end">:</span></dt>
+                                    <dd class="col-7" id="lblSeats"></dd>
+
+                                    <dt class="col-5">Convenience charge <span class="float-end">:</span></dt>
+                                    <dd class="col-7">&#8377; <span id="conveniencecharge"></span></dd>
+
+                                    <dt class="col-5">CGST @9% <span class="float-end">:</span></dt>
+                                    <dd class="col-7">&#8377; <span id="lblcgst"></span></dd>
+
+                                    <dt class="col-5">SGST @9% <span class="float-end">:</span></dt>
+                                    <dd class="col-7">&#8377; <span id="lblsgst"></span></dd>
+                                </dl>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Grand Total</h5> <h3> &#8377; <span class="text-primary" id="Gtotal"></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha512-PqRelaJGXVuQ81N6wjUrRQelCDR7z8RvKGiR9SbSxKHPIt15eJDmIVv9EJgwq0XvgylszsjzvQ0+VyI2WtIshQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Module</title>
+        <script type="module">
+            import Hello, {Welcome} from "../Library/product.js";
+            import ProductDetails from "../Library/productdetails.js";
+            document.querySelector("h2").innerHTML = Hello() + "<br>" + Welcome();
+            document.querySelector("p").innerHTML = ProductDetails("Samsung Tv", 500987.54, true);
+        </script>
+    </head>
+    <body>
+        <h2></h2>
+        <p></p>
+    </body>
+</html>

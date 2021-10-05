@@ -1,3 +1,8 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "sync.gist": "https://github.com/Narendrakaduru/",
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "sync.quietSync": true
 }

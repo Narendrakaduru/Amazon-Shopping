@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Location</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function getDetails(){
+                document.getElementById("host").innerHTML = location.host;
+                var protocol = location.protocol;
+                var status;
+                if(protocol == "http:"){
+                    status = "You are using Web Server";
+                }else{
+                    status = "You are using File Server";
+                }
+                document.getElementById("protocol").innerHTML = protocol + "-" + status;
+                document.getElementById("port").innerHTML = location.port;
+                document.getElementById("url").innerHTML = location.href;
+                document.getElementById("path").innerHTML = location.pathname;
+            }
+        </script>
+    </head>
+    <body>
+        <button class="btn btn-warning" onclick="getDetails()">Get Location Details</button>
+        <dl class="row">
+            <dt>Server Name | IP</dt>
+            <dd id="host"></dd>
+            <dt>Protocol</dt>
+            <dd id="protocol"></dd>
+            <dt>Port</dt>
+            <dd id="port"></dd>
+            <dt>URL</dt>
+            <dd id="url"></dd>
+            <dt>Path</dt>
+            <dd id="path"></dd>
+        </dl>
+    </body>
+</html>

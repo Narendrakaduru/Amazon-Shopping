@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>date picker jqueryUI</title>
+        <link rel="stylesheet" href="../../node_modules/jquery-ui/jquery-ui.css">
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/jquery-ui/jquery-ui.js"></script>
+        <script>
+            $(function(){
+                $("#search").keyup(function(){
+                    var searchString = $("#search").val().toLowerCase();
+                    $("#tbody tr").filter(function(){
+                        $(this).toggle($(this).text().toLocaleLowerCase().indexOf(searchString) > -1);
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="text" id="search" placeholder="Search topics..">
+        <table border="1" width="500">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr>
+                    <td>Samsung TV</td>
+                    <td>80050.54</td>
+                </tr>
+                <tr>
+                    <td>Samsung Mobile</td>
+                    <td>15000.60</td>
+                </tr>
+                <tr>
+                    <td>Sony TV</td>
+                    <td>120000.77</td>
+                </tr>
+                <tr>
+                    <td>Redmi Mobile</td>
+                    <td>8000.88</td>
+                </tr>
+                <tr>
+                    <td>iPhone 13</td>
+                    <td>120000.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

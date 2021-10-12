@@ -1,0 +1,18 @@
+$colors: "red", "green", "blue";
+
+@each $color in $colors {
+    .li_#{$color} {
+        color: #{$color};
+    }
+}
+div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+}
+@for $i from 1 through 3 {
+
+    .box-#{$i} {
+        margin-left: $i * 102px;
+    }
+}

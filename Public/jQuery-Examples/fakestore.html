@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FakeStore API</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(function(){
+                function GetCategories(){
+                    fetch("http://fakestoreapi.com/products/categories")
+                    .then(response => response.json())
+                    .then(data => {
+                        data.unshift("All");
+                        $.each(data, function(key, value){
+                            $(`<option>${value.toUpperCase()}</option>`).appendTo("#lstCategories");
+                        })
+                    })
+                }
+
+                function LoadProducts(data){
+                    $.each(data, function(key, value){
+                            $(`
+                                <div class="card m-3" style="width: 290px">
+                                    <img src=${value.image} height="200" class="card-img-top">
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title" title="${value.description}">${value.title}</h4>
+                                        <div class="mb-2">
+                                            <span class="badge bg-success py-1 px-2">${value.rating.rate} &nbsp<i class="bi bi-star-fill" style="font-size:11px"></i></span>
+                                            <span>(${value.rating.count})</span>
+                                        </div>
+                                        <div>
+                                            <h5>&#8377; ${value.price}</h5>
+                                        </div>
+                                        <button id="btnAdd" value="${value.id}" class="btn btn-danger w-100">
+                                            <span class="bi bi-cart3"></span> Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            `).appendTo("#catalog");
+                        })
+                }
+                var cartItems = [];
+                $(document).on("click", "#btnAdd", function(event){
+                    var id = event.target.value;
+                    fetch(`http://fakestoreapi.com/products/${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        cartItems.push(data);
+                        $("#cartCount").html(cartItems.length);
+                    })
+                    
+                })
+    
+                $(document).on("click", "#deleteCartItem", function(event){   
+                    alert(`${event.id}`);
+                    // var removeItem = event.target.value;
+                    //     cartItems.splice(removeItem, 1);
+                    
+                    // cartItems.grep(value);
+                    // $("#cartCount").html(cartItems.length);                       
+                })
+
+                $(document).on("click", "#btnCart", function(){
+                    $("#tbody").html("");
+                    $.each(cartItems, function(key, value){
+                        $(`
+                            <tr>
+                                <td>${value.title}</td>
+                                <td>${value.price}</td>
+                                <td><img src="${value.image}" alt="${value.title}" style="width:50px; height:50px;"></td>
+                                <td><span id="deleteCartItem" class="bi bi-trash bg-danger p-2 rounded text-white"></span></td>
+                            </tr>
+                        `).appendTo("#tbody");
+                    })
+                })
+
+                function GetProducts(){
+                    fetch("http://fakestoreapi.com/products")
+                    .then(response => response.json())
+                    .then(data => {
+                        LoadProducts(data);
+                    })
+                }
+                
+
+
+                GetCategories();
+                GetProducts();
+
+                $("#lstCategories").change(function(event){
+                    var categoryName = event.target.value.toLowerCase();
+                    if(categoryName == "all"){
+                        GetProducts();
+                    }else{
+                        fetch(`http://fakestoreapi.com/products/category/${categoryName}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            $("#catalog").html("");
+                            LoadProducts(data);
+                        })
+                    }
+                })
+            })
+        </script>
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            .card-title{
+                font-size: 16px;
+                height: 60px;
+                width: 100%;
+                line-height: 1.6;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        </style>
+    </head>
+    <body class="container-fluid p-0">
+        <header class="bg-danger text-white d-flex justify-content-between p-3">
+            <div>
+                <h1><span class="bi bi-cart4"></span> Amazon Shopping</h1>
+            </div>
+            <div class="pe-3">
+                <button type="button" id="btnCart" class="btn btn-warning position-relative" data-bs-target="#cart" data-bs-toggle="modal">
+                    Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-dark">
+                      <span id="cartCount"></span>
+                      <span class="visually-hidden">Cart Items</span>
+                    </span>
+                </button>
+
+                <div class="modal fade" id="cart">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="text-warning">Your cart Items</h3>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Preview</th>
+                                            <th>Remove Item</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+    
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+            </div>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div>
+                        <label class="form-label"></label>
+                        <div>
+                            <select id="lstCategories" class="form-select">
+    
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="d-flex flex-wrap" id="catalog" style="height: 550px; overflow: auto;">
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js" integrity="sha512-PqRelaJGXVuQ81N6wjUrRQelCDR7z8RvKGiR9SbSxKHPIt15eJDmIVv9EJgwq0XvgylszsjzvQ0+VyI2WtIshQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>

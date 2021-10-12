@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax</title>
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function(){
+
+                $("button").click(function(){
+                    $.ajax({
+                        method: "GET",
+                        url: "http://fakestoreapi.com/products",
+                        success: function(data){
+                            $.each(data, function(key, item){
+                                $(`<tr>
+                                        <td>${item.title}</td>
+                                        <td>${item.price}</td>
+                                   </tr>`).appendTo("tbody");
+                            })
+                        },
+                        error: function(xhr){
+                            alert(`${xhr.status} - ${xhr.statusText}`);
+                        }
+                    })
+                })
+            })
+            .ajaxStart(function(){
+                alert("Ajax Request Started...");
+            })
+            .ajaxSuccess(function(){
+                alert("Ajax Request Processed Successfully...");
+            })
+            .ajaxComplete(function(){
+                alert("Ajax response Completes...");
+            })
+            .ajaxStop(function(){
+                alert("Ajax Request Ends...");
+            })
+            .ajaxError(function(){
+                alert("Something went wrong..." + xhr.statusText);
+            })
+        </script>
+    </head>
+    <body>
+        <button>Fetch Data</button>
+        <table border="1" width="500">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </body>
+</html>

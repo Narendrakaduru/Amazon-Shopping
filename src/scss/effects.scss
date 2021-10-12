@@ -1,0 +1,18 @@
+$border: 2px solid #e7e7e7;
+$shadow: 3px 3px 3px #e7e7e7;
+$path: "../../Public/images/netflixback.jpg";
+.container{
+    border: $border;
+    padding: 20px;
+    box-shadow: $shadow;
+    background-image: url($path);
+    h2{
+        text-align: center;
+        color: blue;
+        border: $border;
+        box-shadow: $shadow;
+    }
+    p{
+        color: green;
+    }
+}

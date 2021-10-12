@@ -1,0 +1,24 @@
+.container {
+  background-color: blue;
+}
+
+.container h2 {
+  background-color: #6565fc;
+}
+
+.btn-sub {
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #f54500;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn-sub:hover {
+  background-color: #ff5f1f;
+  color: #fff;
+  cursor: pointer;
+}

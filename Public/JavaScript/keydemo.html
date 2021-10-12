@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Events</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script>
+            var users = [
+                {UserName : 'jhon'},
+                {UserName : 'jhon12'},
+                {UserName : 'jhon_nit'},
+                {UserName : 'jhon_2'},
+                {UserName : 'jhon3'},
+            ];
+            function VerifyUser(){
+                var username = document.getElementById("txtName").value;
+                var lblUser = document.getElementById("lblUser");
+                for(var user of users){
+                    if(user.UserName == username){
+                        lblUser.innerHTML = "User Name taken - Try another";
+                        lblUser.style.color = "red";
+                        break;
+                    }else{
+                        lblUser.innerHTML = "User Name Available";
+                        lblUser.style.color = "green";
+                    }
+                }
+            }
+            function VerifyPassword(e){
+                var passwordWarning = document.getElementById("passwordWarning");
+                if(e.keyCode >= 65 && e.keyCode <= 90){
+                    passwordWarning.style.display = "block";
+                }else{
+                    passwordWarning.style.display = "none";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid w-25">
+            <h3>Register User</h3>
+            <dl>
+                <dt>User Name</dt>
+                <dd>
+                    <input onkeyup="VerifyUser()" type="text" id="txtName" class="form-control">
+                </dd>
+                <dd id="lblUser"></dd>
+                <dt>Password</dt>
+                <dd>
+                    <input type="password" class="form-control" onkeypress="VerifyPassword(event)">
+                </dd>
+                <dd id="passwordWarning" class="text-warning" style="display: none;">
+                    <span class="bi bi-exclamation-triangle-fill"></span> Caps ON
+                </dd>
+            </dl>
+        </div>
+    </body>
+</html>

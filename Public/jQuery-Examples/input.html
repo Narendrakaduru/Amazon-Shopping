@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Input</title>
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function(){
+                $("button").click(function(){
+                    $("#lblName").html($("#Name").val());
+                    $("#lblPrice").html($("#Price").val());
+                    $("#lblCity").html($("#City").val());
+
+                    var status = $("#Stock").prop("checked"); // returns true or false.
+
+                    if(status == true){
+                        $("#lblStock").html("Available");
+                    }else{
+                        $("#lblStock").html("Out of Stock");
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <dl>
+                    <dt>Name</dt>
+                    <dd>
+                        <input type="text" id="Name" class="form-control">
+                    </dd>
+                    <dt>Price</dt>
+                    <dd>
+                        <input type="text" id="Price" class="form-control">
+                    </dd>
+                    <dt>Shipped To</dt>
+                    <dd>
+                        <select id="City" class="form-select">
+                            <option>Delhi</option>
+                            <option>Hyd</option>
+                        </select>
+                    </dd>
+                    <dt>Stock</dt>
+                    <dd class="form-check form-switch">
+                        <input type="checkbox" id="Stock" class="form-check-input"> Yes
+                    </dd>
+                </dl>
+                <button class="btn btn-warning w-100">Register</button>
+            </div>
+            <div class="col-9">
+                <div class="p-5">
+                    <dl>
+                        <dt>Name</dt>
+                        <dd id="lblName"></dd>
+                        <dt>Price</dt>
+                        <dd id="lblPrice"></dd>
+                        <dt>Shipped To</dt>
+                        <dd id="lblCity"></dd>
+                        <dt>Stock</dt>
+                        <dd id="lblStock"></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

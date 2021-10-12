@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blur</title>
+        <script>
+            function ShowAlert(){
+                var msg = document.getElementById("msg");
+                msg.innerHTML = "Name in Block Letters Only";
+                msg.style.fontSize = "14px";
+                msg.style.marginTop = "5px";
+                msg.style.color = "red";
+            }
+            function ChangeCase(){
+                document.getElementById("msg").innerHTML = "";
+                var txtName = document.getElementById("txtName").value;
+                document.getElementById("txtName").value = txtName.toUpperCase();
+            }
+            // with out submit button how to submit a form ?
+            // create a id for form and add .submit() method to it.
+            // it will automatically submit after finishing the form.
+            // document.getElementById("formId").submit();
+        </script>
+    </head>
+    <body>
+        <form onsubmit="alert('form submitted')" onreset="alert('form will reset ')">
+            <fieldset>
+                <legend>Register</legend>
+                <dl>
+                    <dt>User Name</dt>
+                    <dd>
+                        <input onfocus="ShowAlert()" onblur="ChangeCase()" id="txtName" type="text" placeholder="Name in Block Letters">
+                    </dd>
+                    <dd id="msg"></dd>
+                </dl>
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

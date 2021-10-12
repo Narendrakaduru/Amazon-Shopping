@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>date picker jqueryUI</title>
+        <link rel="stylesheet" href="../../node_modules/jquery-ui/jquery-ui.css">
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/jquery-ui/jquery-ui.js"></script>
+        <script>
+            $(function(){
+                $("#search").keyup(function(){
+                    var searchString = $("#search").val().toLowerCase();
+                    $("#topics li").filter(function(){
+                        $(this).toggle($(this).text().toLocaleLowerCase().indexOf(searchString) > -1);
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="text" id="search" placeholder="Search topics..">
+        <ol id="topics">
+            <li>HTML Tutorials</li>
+            <li>CSS Examples</li>
+            <li>HTML Examples</li>
+            <li>Javascript Tutorials</li>
+            <li>CSS Tutorials</li>
+        </ol>
+    </body>
+</html>

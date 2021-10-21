@@ -1,0 +1,23 @@
+db.tbladmin.insertMany([
+    {"UserId":"Jhon_Admin","Password":"12345","FirstName":"jhon","LastName":"Reddy","Email":"jhonreddy@gmail.com"},
+    {"UserId":"Aravind_Admin","Password":"12345","FirstName":"aravind","LastName":"Reddy","Email":"aravindreddy@gmail.com"},
+    {"UserId":"Mahesh_Admin","Password":"12345","FirstName":"mahesh","LastName":"Reddy","Email":"maheshreddy@gmail.com"},
+    {"UserId":"Anand_Admin","Password":"12345","FirstName":"anand","LastName":"Reddy","Email":"anandreddy@gmail.com"}
+])
+
+db.tblcustomers.insertMany([
+    {"CustomerId":"Jhon_hyd","FirstName":"jhon","LastName":"reddy","Password":"12345","Gender":"male","Email":"jhonreddy@gmail.com","mobile":"+919876543210","Address":"Hyderabad","DateofBirth":"20-10-1997"},
+    {"CustomerId":"Aravind_bnglr","FirstName":"aravind","LastName":"reddy","Password":"12345","Gender":"male","Email":"aravindreddy@gmail.com","mobile":"+919876543210","Address":"Banglore","DateofBirth":"10-05-1993"},
+    {"CustomerId":"Mahesh_pune","FirstName":"mahesh","LastName":"reddy","Password":"12345","Gender":"male","Email":"maheshreddy@gmail.com","mobile":"+919876543210","Address":"Pune","DateofBirth":"07-03-1992"}
+])
+
+db.tblcategories.insertMany([
+    {"CategoryId":1,"CategoryName":"electronics"},
+    {"CategoryId":2,"CategoryName":"jewelery"},
+    {"CategoryId":3,"CategoryName":"men's clothing"},
+    {"CategoryId":4,"CategoryName":"women's clothing"},
+])
+
+db.tblcart.insert([
+    {"CartId":1,"CustomerId":"Jhon_hyd","ProductTitle":"Mens Casual Premium Slim Fit T-Shirts ","Image":"https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg","Price":22.3,"Total":0}
+])

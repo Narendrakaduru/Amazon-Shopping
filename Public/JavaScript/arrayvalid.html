@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valid</title>
+        <script>
+            function f1(){
+                var actions = [function(){document.write("Success..")},
+                function(){document.write("Invalid")}];
+
+                var [success, failure] = actions;
+
+                var password = prompt("Enter Password");
+
+                if(password=="john123") {
+                    success();
+                } else {
+                    failure();
+                }
+            }
+            f1();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
